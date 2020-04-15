@@ -1,0 +1,85 @@
+.banner
+  &__slide
+    height: 550px
+    padding-bottom: 50px
+    outline: 0
+    &-wrapper
+      position: relative
+      display: flex
+      flex-flow: column nowrap
+      justify-content: center
+      align-items: flex-start
+      height: 100%
+  &__heading
+    width: 500px
+    margin-bottom: 40px
+    color: #fff
+    line-height: 60px
+    font-size: 50px
+  &__btn
+    min-width: 220px
+    width: 220px
+  &__image
+    position: absolute
+    bottom: -50px
+    right: 30px
+  &__arrow
+    z-index: 2
+    position: absolute
+    bottom: 50px
+    right: calc(50% - 540px)
+    display: block
+    height: 50px
+    border: 2px solid #fff
+    background-color: transparent
+    transition: background-color .3s ease
+    cursor: pointer
+    outline: 0
+    &:hover
+      background-color: #fff
+      &:after
+        background-image: url('../img/icons/caret-blue.svg')
+    &:after
+      content: ''
+      position: absolute
+      top: 15px
+      left: 17px
+      width: 10px
+      height: 16px
+      transition: background-image .3s ease
+      background:
+        image: url('../img/icons/caret-white.svg')
+        size: contain
+        position: center
+        repeat: no-repeat
+    &--prev
+      width: 50px
+      border-radius: 50px 0 0 50px
+    &--next
+      width: 48px
+      border-left: none
+      border-radius: 0 50px 50px 0
+      transform: translateX(48px)
+      &:after
+        transform: rotate(180deg)
+  &__dots
+    position: absolute
+    bottom: 50px
+    left: calc(50% - 630px)
+    display: flex
+    flex-flow: row nowrap
+    margin: 0
+    li
+      display: block
+      width: 7px
+      height: 7px
+      opacity: 0.3
+      border-radius: 50%
+      background-color: #fff
+      transition: all .3s ease
+      cursor: pointer
+      &:not(:last-child)
+        margin-right: 12px
+      &.slick-active
+        opacity: 1
+        transform: scale(1.3)

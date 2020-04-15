@@ -1,0 +1,31 @@
+.calc
+  z-index: 9
+  position: fixed
+  top: 50%
+  right: -105px
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  width: 260px
+  height: 50px
+  background-color: #007FDB
+  border-top-left-radius: 5px
+  border-top-right-radius: 5px
+  transform: translateY(-50%) rotate(-90deg)
+  text-decoration: none
+  &__icon
+    width: 17px
+    height: 20px
+    margin-right: 3px
+    background:
+      image: url('data:image/svg+xml,%3Csvg%20width%3D%2217%22%20height%3D%2220%22%20viewBox%3D%220%200%2017%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%2215.5%22%20y%3D%221.5%22%20width%3D%2217%22%20height%3D%2214%22%20rx%3D%221%22%20transform%3D%22rotate%2890%2015.5%201.5%29%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%0A%3Crect%20x%3D%2212.5%22%20y%3D%224.5%22%20width%3D%225%22%20height%3D%228%22%20rx%3D%221%22%20transform%3D%22rotate%2890%2012.5%204.5%29%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2211.5%22%20cy%3D%2212.5%22%20r%3D%221%22%20transform%3D%22rotate%2890%2011.5%2012.5%29%22%20fill%3D%22white%22%2F%3E%0A%3Ccircle%20cx%3D%2211.5%22%20cy%3D%2215.5%22%20r%3D%221%22%20transform%3D%22rotate%2890%2011.5%2015.5%29%22%20fill%3D%22white%22%2F%3E%0A%3Ccircle%20cx%3D%228.5%22%20cy%3D%2212.5%22%20r%3D%221%22%20transform%3D%22rotate%2890%208.5%2012.5%29%22%20fill%3D%22white%22%2F%3E%0A%3Ccircle%20cx%3D%228.5%22%20cy%3D%2215.5%22%20r%3D%221%22%20transform%3D%22rotate%2890%208.5%2015.5%29%22%20fill%3D%22white%22%2F%3E%0A%3Ccircle%20cx%3D%225.5%22%20cy%3D%2212.5%22%20r%3D%221%22%20transform%3D%22rotate%2890%205.5%2012.5%29%22%20fill%3D%22white%22%2F%3E%0A%3Ccircle%20cx%3D%225.5%22%20cy%3D%2215.5%22%20r%3D%221%22%20transform%3D%22rotate%2890%205.5%2015.5%29%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      size: contain
+      position: center
+      repeat: no-repeat
+  &__text
+    color: #fff
+    line-height: 18px
+    font:
+      size: 12px
+      weight: 500

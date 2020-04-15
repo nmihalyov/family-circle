@@ -8,6 +8,7 @@
   border-radius: 50px
   line-height: 18px
   text-decoration: none
+  outline: 0
   &--primary
     background-color: $orange
     transition: background-color .3s ease
@@ -17,3 +18,13 @@
     &:active
       transition: none
       background-color: darken($orange, 7)
+  &--minor
+    border: 2px solid #fff
+    transition: all .3s ease
+    color: #fff
+    &:hover
+      background-color: #fff
+      color: $blue
+    &:active
+      transition: none
+      background-color: darken(#fff, 5)

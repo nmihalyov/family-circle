@@ -1,0 +1,11 @@
+include ../_ui/button/button
+
+mixin banner
+  section.banner.container
+    .banner__slider.js-banner-slider
+      - for (let i = 4; i--;)
+        .banner__slide(style="background-color: #005C9E;")
+          .banner__slide-wrapper.wrapper
+            p.banner__heading Септик за 1 день. <br>Под ключ <br>с доставкой.
+            +button-minor('link', 'Узнать подробности', 'banner__btn', {link: '#'})
+            img.banner__image(src="img/inhtml/slider-1.png", alt="")

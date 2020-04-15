@@ -1,3 +1,7 @@
 mixin button-primary(type, text, className, options)
   if type === 'link'
     a.button.button--primary(class=`${className ? className : ''}`, href=options.link)= text
+
+mixin button-minor(type, text, className, options)
+  if type === 'link'
+    a.button.button--minor(class=`${className ? className : ''}`, href=options.link)= text
