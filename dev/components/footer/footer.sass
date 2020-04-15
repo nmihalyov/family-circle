@@ -1,0 +1,80 @@
+.footer
+  background-color: #fff
+  &-middle
+    border-top: 1px solid rgba(0, 0, 0, .1)
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+  &__top
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: stretch
+    padding: 65px 0
+  &__col
+    position: relative
+  &__heading
+    margin-bottom: 12px
+    text-transform: uppercase
+    letter-spacing: .1em
+    line-height: 20px
+    font:
+      size: 11px
+      weight: 500
+  &__list
+    &:not(:last-child)
+      margin-bottom: 55px
+  &__link
+    display: block
+    color: $grey
+    line-height: 28px
+    text-decoration: none
+    font-size: 15px
+  &__socials
+    position: absolute
+    bottom: 0
+    left: 0
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    &-item
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+      width: 36px
+      height: 36px
+      margin-right: 20px
+      border-radius: 50%
+      background-color: #E8F0F5
+  &__middle
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    padding: 30px 0
+  &__nav
+    @include navigation
+    &-link
+      @include navigation-link
+  &__tel
+    color: #000
+    line-height: 24px
+    font:
+      size: 20px
+      weight: 500
+  &__bottom
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    padding: 25px 0
+    color: $grey
+    line-height: 18px
+    font-size: 12px
+  &__copyright
+    margin-right: 45px
+  &__policy
+    text-decoration: none
+    color: $grey
+  &__design
+    margin-left: auto

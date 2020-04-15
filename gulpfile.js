@@ -120,7 +120,7 @@ gulp.task('scripts', () => {
 		prefix: '@@',                             // импортим все файлы, описанные в результирующем js
 		basepath: '@file'                         //
 	}))
-	.pipe(sourcemaps.init())                    // инициализация sourcemap'ов
+	// .pipe(sourcemaps.init())                    // инициализация sourcemap'ов
 	.pipe(babel({
     presets: ['@babel/preset-env']
   }))
@@ -128,7 +128,7 @@ gulp.task('scripts', () => {
 	.pipe(rename({
 		suffix: '.min'                            // переименовываем сжатый файл
 	}))
-	.pipe(sourcemaps.write())                   // запись sourcemap'ов
+	// .pipe(sourcemaps.write())                   // запись sourcemap'ов
 	.pipe(gulp.dest(`${build}/js`))             // путь вывода файлов
 	.pipe(browserSync.reload({
 		stream: true                              // перезагружаем страницу

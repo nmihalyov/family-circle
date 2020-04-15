@@ -37,15 +37,88 @@
         <div class="header-top container">
           <div class="wrapper">
             <div class="header__top">
-              <div class="header__nav"><a class="header__nav-link" href="#">Услуги</a><a class="header__nav-link" href="#">Септики под ключ</a><a class="header__nav-link" href="#">Акции</a><a class="header__nav-link" href="#">Производители</a><a class="header__nav-link" href="#">Доставка и оплата</a><a class="header__nav-link" href="#">О компании</a><a class="header__nav-link" href="#">Контакты</a></div>
+              <nav class="header__nav">
+                <div class="header__nav-dropdown"><a class="header__nav-link js-dropdown-button" href="#">Услуги</a>
+                  <div class="header__nav-dropdown-menu js-dropdown-menu"><a class="header__nav-dropdown-item" href="#">Откачка септиков</a><a class="header__nav-dropdown-item" href="#">Сервисное обслуживание</a><a class="header__nav-dropdown-item" href="#">Установка септиков</a><a class="header__nav-dropdown-item" href="#">Ремонт септиков</a></div>
+                </div><a class="header__nav-link" href="#">Септики под ключ</a><a class="header__nav-link" href="#">Акции</a><a class="header__nav-link" href="#">Производители</a><a class="header__nav-link" href="#">Доставка и оплата</a><a class="header__nav-link" href="#">О компании</a><a class="header__nav-link" href="#">Контакты</a>
+              </nav>
               <p class="header__location">Краснодарский край</p>
             </div>
           </div>
         </div>
         <div class="container">
-          <div class="wrapper"></div>
+          <div class="wrapper">
+            <div class="header__bottom"><img class="header__logo" src="img/logo.svg" alt="Семейный круг"/>
+              <p class="header__desc">Установка и обслуживание систем канализации</p><a class="button button--primary header__btn" href="catalog.html">Каталог</a>
+              <form class="header__search">
+                <div class="header__search-label">
+                  <input class="header__search-input js-header-search" type="text" name="q" placeholder="Поиск по септикам" autocomplete="off"/>
+                  <div class="header__search-hint js-header-search-hint">
+                    <p class="header__search-hint-heading">Пример поиска</p><a class="header__search-hint-item" href="#">Септик Росток мини</a><a class="header__search-hint-item" href="#">Септик большой</a><a class="header__search-hint-item" href="#">Обслуживание</a><a class="header__search-hint-item" href="#">Станции биологической отчистки</a><a class="header__search-hint-item" href="#">Бактерии</a>
+                  </div>
+                </div>
+              </form><a class="header__cart" href="cart.html">
+                <p class="header__cart-count">2</p></a>
+              <div class="header__info">
+                <p class="header__info-tel">+7 499 456-78-89</p>
+                <p class="header__info-workhour">Ежедневно с 9:00 до 18:00</p>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
+      <footer class="footer">
+        <div class="container">
+          <div class="wrapper">
+            <div class="footer__top">
+              <div class="footer__col">
+                <p class="footer__heading">Услуги</p>
+                <div class="footer__list"><a class="footer__link" href="#">Откачка</a><a class="footer__link" href="#">Обслуживание</a><a class="footer__link" href="#">Установка</a><a class="footer__link" href="#">Ремонт</a></div>
+                <div class="footer__list"><a class="footer__link" href="#">Автономная канализация</a><a class="footer__link" href="#">Локальные очистные сооружения</a><a class="footer__link" href="#">Станции биологической очистки</a><a class="footer__link" href="#">Запчасти и оборудование</a><a class="footer__link" href="#">Бактерии для септиков</a></div>
+                <div class="footer__socials"><a class="footer__socials-item" href="//vk.com"><img src="img/icons/socials/vk.svg" alt="vk"/></a><a class="footer__socials-item" href="//facebook.com"><img src="img/icons/socials/facebook.svg" alt="facebook"/></a><a class="footer__socials-item" href="//instagram.com"><img src="img/icons/socials/instagram.svg" alt="facebook"/></a></div>
+              </div>
+              <div class="footer__col">
+                <p class="footer__heading">Производитель</p>
+                <div class="footer__list"><a class="footer__link" href="#">Топас</a><a class="footer__link" href="#">Коло Веси</a><a class="footer__link" href="#">Юнилос Астра</a><a class="footer__link" href="#">Росток</a><a class="footer__link" href="#">Танк</a><a class="footer__link" href="#">Термит</a><a class="footer__link" href="#">Атлант</a><a class="footer__link" href="#">Волгарь</a><a class="footer__link" href="#">BioDeka</a><a class="footer__link" href="#">Кристалл</a><a class="footer__link" href="#">Все производители</a></div>
+              </div>
+              <div class="footer__col">
+                <p class="footer__heading">Назначение</p>
+                <div class="footer__list"><a class="footer__link" href="#">Для дачи</a><a class="footer__link" href="#">Для частного дома</a><a class="footer__link" href="#">Для бани</a><a class="footer__link" href="#">Для туалета</a><a class="footer__link" href="#">Для выгребных ям</a></div>
+                <p class="footer__heading">Материал</p>
+                <div class="footer__list"><a class="footer__link" href="#">Пластиковые</a><a class="footer__link" href="#">Стеклопластиковые</a><a class="footer__link" href="#">Металлические</a></div>
+              </div>
+              <div class="footer__col">
+                <p class="footer__heading">Пользователи</p>
+                <div class="footer__list"><a class="footer__link" href="#">На 2 человека</a><a class="footer__link" href="#">На 3 человека</a><a class="footer__link" href="#">На 4 человека</a><a class="footer__link" href="#">На 5 человек</a><a class="footer__link" href="#">На 6 человек</a><a class="footer__link" href="#">На 8 человек</a></div>
+                <p class="footer__heading">Объем</p>
+                <div class="footer__list"><a class="footer__link" href="#">1 куб</a><a class="footer__link" href="#">1,5 куба</a><a class="footer__link" href="#">2 куба</a><a class="footer__link" href="#">3 куба</a><a class="footer__link" href="#">4 куба</a><a class="footer__link" href="#">5 кубов</a></div>
+              </div>
+              <div class="footer__col">
+                <p class="footer__heading">Особенности</p>
+                <div class="footer__list"><a class="footer__link" href="#">Без откачки</a><a class="footer__link" href="#">Без электричества</a><a class="footer__link" href="#">Бюджетные</a><a class="footer__link" href="#">Вертикальные</a><a class="footer__link" href="#">Горизонтальные</a><a class="footer__link" href="#">Для непостоянного проживания</a><a class="footer__link" href="#">Для постоянного проживания</a><a class="footer__link" href="#">Маленькие</a><a class="footer__link" href="#">Накопительные</a></div>
+                <p class="footer__heading">Количество камер</p>
+                <div class="footer__list"><a class="footer__link" href="#">Однокамерные</a><a class="footer__link" href="#">Двухкамерные</a><a class="footer__link" href="#">Трехкамерные</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-middle container">
+          <div class="wrapper">
+            <div class="footer__middle"><img class="footer__logo" src="img/logo.svg" alt="Семейный круг"/>
+              <nav class="footer__nav"><a class="footer__nav-link" href="#">Септики под ключ</a><a class="footer__nav-link" href="#">Акции</a><a class="footer__nav-link" href="#">Доставка и оплата</a><a class="footer__nav-link" href="#">О компании</a><a class="footer__nav-link" href="#">Контакты</a></nav>
+              <p class="footer__tel">+7 499 456-78-89</p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="wrapper">
+            <div class="footer__bottom">
+              <p class="footer__copyright">&copy;2020, &laquo;Семейный круг&raquo;</p><a class="footer__policy" href="#">Политика конфиденциальности</a>
+              <p class="footer__design">Дизайн – студия &laquo;Арбуз&raquo;</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

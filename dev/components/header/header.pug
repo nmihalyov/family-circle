@@ -1,10 +1,18 @@
+include ../_ui/button/button
+
 mixin header
   header.header
     .header-top.container
       .wrapper
         .header__top
-          .header__nav
-            a.header__nav-link(href="#") Услуги
+          nav.header__nav
+            .header__nav-dropdown
+              a.header__nav-link.js-dropdown-button(href="#") Услуги
+              .header__nav-dropdown-menu.js-dropdown-menu
+                a.header__nav-dropdown-item(href="#") Откачка септиков
+                a.header__nav-dropdown-item(href="#") Сервисное обслуживание
+                a.header__nav-dropdown-item(href="#") Установка септиков
+                a.header__nav-dropdown-item(href="#") Ремонт септиков
             a.header__nav-link(href="#") Септики под ключ
             a.header__nav-link(href="#") Акции
             a.header__nav-link(href="#") Производители
@@ -14,3 +22,22 @@ mixin header
           p.header__location Краснодарский край
     .container
       .wrapper
+        .header__bottom
+          img.header__logo(src="img/logo.svg", alt="Семейный круг")
+          p.header__desc Установка и обслуживание систем канализации
+          +button-primary('link', 'Каталог', 'header__btn', {link: 'catalog.html'})
+          form.header__search
+            .header__search-label
+              input.header__search-input.js-header-search(type="text", name="q", placeholder="Поиск по септикам", autocomplete="off")
+              .header__search-hint.js-header-search-hint
+                p.header__search-hint-heading Пример поиска
+                a.header__search-hint-item(href="#") Септик Росток мини
+                a.header__search-hint-item(href="#") Септик большой
+                a.header__search-hint-item(href="#") Обслуживание
+                a.header__search-hint-item(href="#") Станции биологической отчистки
+                a.header__search-hint-item(href="#") Бактерии
+          a.header__cart(href="cart.html")
+            p.header__cart-count 2
+          .header__info
+            p.header__info-tel +7 499 456-78-89
+            p.header__info-workhour Ежедневно с 9:00 до 18:00

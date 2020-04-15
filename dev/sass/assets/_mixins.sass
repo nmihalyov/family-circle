@@ -1,0 +1,37 @@
+// navigation
+@mixin navigation
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-items: center
+
+@mixin navigation-link
+  margin-right: 30px
+  color: $black
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: .1em
+  line-height: 13px
+  transition: opacity .3s ease
+  font:
+    size: 11px
+    weight: 500
+  &:hover
+    opacity: 0.8
+
+// dropdown
+@mixin dropdown
+  padding: 15px 0 20px
+  background-color: #fff
+  border-radius: 5px
+  box-shadow: 0px 14px 25px rgba(0, 0, 0, 0.05)
+
+@mixin dropdown-item
+  display: block
+  padding-left: 30px
+  line-height: 30px
+  color: $black
+  text-decoration: none
+  transition: color .3s ease
+  &:hover
+    color: $grey

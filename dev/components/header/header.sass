@@ -14,19 +14,36 @@
     align-items: center
     padding: 20px 0
   &__nav
+    @include navigation
     &-link
-      margin-right: 30px
-      color: $black
-      text-transform: uppercase
-      text-decoration: none
-      letter-spacing: .1em
-      line-height: 13px
-      transition: opacity .3s ease
-      font:
-        size: 11px
-        weight: 500
-      &:hover
-        opacity: 0.8
+      @include navigation-link
+    &-dropdown
+      position: relative
+      .header__nav-link
+        position: relative
+        padding-right: 15px
+        &:before
+          content: ''
+          position: absolute
+          top: 1px
+          right: 0
+          display: block
+          width: 9px
+          height: 8px
+          background:
+            image: url('data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%228%22%20viewBox%3D%220%200%209%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0.999623%203.53553L4.53516%207.07107L8.07069%203.53553%22%20stroke%3D%22%233B3B3B%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+            size: contain
+            position: center
+            repeat: no-repeat
+      &-menu
+        position: absolute
+        top: 25px
+        left: -30px
+        display: none
+        width: 300px
+        @include dropdown
+      &-item
+        @include dropdown-item
   &__location
     color: $grey
     letter-spacing: .1em
@@ -46,3 +63,137 @@
         size: contain
         position: center
         repeat: no-repeat
+  &__bottom
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    padding: 30px 0
+  &__logo
+    margin-right: 10px
+  &__desc
+    width: 180px
+    margin-right: 60px
+    padding-left: 20px
+    border-left: 1px solid rgba(163, 163, 163, 0.2)
+    color: rgba(0, 0, 0, .5)
+    line-height: 18px
+    font-size: 12px
+  &__btn
+    position: relative
+    min-width: 145px
+    margin-right: 25px
+    padding-left: 20px
+    &:before
+      content: ''
+      position: absolute
+      top: 19px
+      left: 28px
+      display: block
+      width: 14px
+      height: 12px
+      background:
+        image: url('data:image/svg+xml,%3Csvg%20width%3D%2214%22%20height%3D%2212%22%20viewBox%3D%220%200%2014%2012%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20y1%3D%221%22%20x2%3D%2214%22%20y2%3D%221%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%0A%3Cline%20y1%3D%226%22%20x2%3D%2211%22%20y2%3D%226%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%0A%3Cline%20y1%3D%2211%22%20x2%3D%2214%22%20y2%3D%2211%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__search
+    width: 300px
+    margin-right: 25px
+    &-label
+      position: relative
+      display: block
+      &:before
+        content: ''
+        position: absolute
+        top: 18px
+        left: 25px
+        display: block
+        width: 16px
+        height: 16px
+        background:
+          image: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M15%2015L12%2012M14%207.5C14%2011.0899%2011.0899%2014%207.5%2014C3.91015%2014%201%2011.0899%201%207.5C1%203.91015%203.91015%201%207.5%201C11.0899%201%2014%203.91015%2014%207.5Z%22%20stroke%3D%22%23A3A3A3%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &-hint
+      position: absolute
+      top: 60px
+      left: 0
+      display: none
+      width: 100%
+      @include dropdown
+      &-heading
+        margin-bottom: 8px
+        padding-left: 30px
+        color: $grey
+        line-height: 18px
+        font-size: 12px
+      &-item
+        @include dropdown-item
+    &-input
+      width: 100%
+      height: 50px
+      padding: 16px 20px 14px 55px
+      border: none
+      border-radius: 50px
+      background-color: #F1F1F1
+      color: $grey
+      outline: 0
+  &__cart
+    position: relative
+    display: block
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: #F1F1F1
+    &:before
+      content: ''
+      position: absolute
+      top: 15px
+      left: 16px
+      display: block
+      width: 18px
+      height: 19px
+      background:
+        image: url('data:image/svg+xml,%3Csvg%20width%3D%2218%22%20height%3D%2219%22%20viewBox%3D%220%200%2018%2019%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%221%22%20y%3D%225%22%20width%3D%2216%22%20height%3D%2213%22%20rx%3D%222%22%20stroke%3D%22%23005C9E%22%20stroke-width%3D%222%22%2F%3E%0A%3Crect%20x%3D%225%22%20y%3D%221%22%20width%3D%228%22%20height%3D%224%22%20rx%3D%222%22%20stroke%3D%22%23005C9E%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+        position: center
+        repeat: no-repeat
+    &-count
+      position: absolute
+      top: -4px
+      right: -4px
+      display: flex
+      flex-flow: row nowrap
+      justify-content: center
+      align-items: center
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      background-color: $blue
+      color: #fff
+      font-size: 12px
+  &__info
+    margin-left: auto
+    text-align: right
+    &-tel
+      margin-bottom: 3px
+      color: #000
+      line-height: 24px
+      font:
+        size: 20px
+        weight: 500
+    &-workhour
+      position: relative
+      line-height: 18px
+      font-size: 12px
+      &:before
+        content: ''
+        position: absolute
+        top: 5px
+        left: 10px
+        display: block
+        width: 7px
+        height: 7px
+        border-radius: 50%
+        background-color: $green
