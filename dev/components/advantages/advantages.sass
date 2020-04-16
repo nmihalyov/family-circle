@@ -1,0 +1,81 @@
+.advantages
+  padding: 65px 0 70px
+  background-color: #fff
+  &__wrapper
+    position: relative
+  &__map
+    z-index: 1
+    position: absolute
+    top: -825px
+    left: 150px
+    width: 3295px
+    height: 2570px
+    background:
+      image: url('../img/map.svg')
+      size: contain
+      position: center
+      repeat: no-repeat
+  &__content
+    z-index: 2
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-end
+  &__row
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 540px
+    &:not(:last-child)
+      margin-bottom: 35px
+  &__cell
+    width: 240px
+  &__icon
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    width: 70px
+    height: 70px
+    margin-bottom: 20px
+    border-radius: 50%
+    background-color: $light-blue
+  &__heading
+    margin-bottom: 10px
+    line-height: 18px
+    font-weight: 500
+  &__text
+    color: $grey
+    line-height: 20px
+  &__digits
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 270px
+    height: 360px
+    padding: 40px 20px 40px 35px
+    border-radius: 5px
+    background:
+      color: #fff
+      image: url('data:image/svg+xml,%3Csvg%20width%3D%22270%22%20height%3D%22199%22%20viewBox%3D%220%200%20270%20199%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M36.2903%200.000106825C36.2903%2017.2801%202.49976%2018.4001%20-8.59546%2018.4001L-8.59546%20201.2L170.948%20201.2L272.19%20201.2L272.19%2018.4001C246%2018.4001%20236.281%206.00012%20236.281%200.000106886C236.281%206.28137%20228.002%2018.4001%20202.866%2018.4001C177.73%2018.4001%20170.449%206.00012%20170.449%200.000106866C170.449%206.50012%20162.968%2018.4001%20139.029%2018.4001C109.504%2018.4001%20104.118%206.00012%20104.118%200.000106846C104.118%205.20008%2099.6291%2018.4001%2069.7052%2018.4001C39.7814%2018.4001%2036.2903%204.00012%2036.2903%200.000106825Z%22%20fill%3D%22%23005C9E%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      size: contain
+      position: bottom center
+      repeat: no-repeat
+    &-top
+      .advantages__digits-num
+        color: $blue
+      .advantages__digits-desc
+        color: $grey
+    &-bottom
+      color: #fff
+      .advantages__digits-desc
+        opacity: 0.65
+    &-num
+      font:
+        size: 35px
+        weight: 100
+    &-desc
+      line-height: 20px

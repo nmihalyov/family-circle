@@ -1,0 +1,20 @@
+mixin item-card(image, label, type, char, name, rating, feedbacks, price)
+  .item-card
+    if label === 'hit'
+      .item-card__label.item-card__label--hit Хит
+    img.item-card__image(src=image, alt="")
+    .item-card__info
+      .item-card__desc
+        span= type
+        span= char
+      p.item-card__name= name
+      .item-card__rating
+        - for (let i = rating; i--;)
+          .item-card__star.item-card__star--full
+        - for (let i = 5 - rating; i--;)
+          .item-card__star.item-card__star--empty
+        p.item-card__feedbacks= feedbacks
+      .item-card__actions
+        p.item-card__price= price
+          |&nbsp;&#8381;
+        a.item-card__add.js-add-item(href="#") В корзину
