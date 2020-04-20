@@ -1,0 +1,8 @@
+include ../_ui/button/button
+
+mixin calc-cta
+  .calc-cta
+    .calc-cta__icon
+    p.calc-cta__heading Калькулятор для самостоятельного расчета примерной стоимости установки
+    p.calc-cta__desc Ответьте всего на 7 вопросов
+    +button-primary('link', 'Подобрать септик', 'calc-cta__btn', {link: '#'})

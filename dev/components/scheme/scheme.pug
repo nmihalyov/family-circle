@@ -1,0 +1,29 @@
+include ../_ui/heading/heading
+include ../_ui/button/button
+
+mixin scheme
+  section.scheme.container
+    .wrapper
+      +heading('Схема работы с нами')
+      .scheme__timeline
+        .scheme__timeline-item
+          .scheme__timeline-num 1
+          p.scheme__timeline-text Принимаем заявку
+        .scheme__timeline-item
+          .scheme__timeline-num 2
+          p.scheme__timeline-text Выезжаем на замер
+        .scheme__timeline-item
+          .scheme__timeline-num 3
+          p.scheme__timeline-text Монтируем за 1 день
+        .scheme__timeline-item
+          .scheme__timeline-num 4
+          p.scheme__timeline-text Оплата на участке
+        .scheme__timeline-item
+          .scheme__timeline-num 5
+          p.scheme__timeline-text Выездная проверка качества
+        .scheme__timeline-item
+          .scheme__timeline-num 6
+          p.scheme__timeline-text Гарантия и сервис
+      .scheme__checkout
+        +button-secondary('link', 'Заказать выезд инженера', '', {link: '#'})
+        p.scheme__checkout-text Наша компания всегда работает только по официальному договору. Мы пользуемся собственными постоянными бригадами компании. Они обладают необходимой специализацией, опытом по качественному обустройству автономных канализаций на частных участках.

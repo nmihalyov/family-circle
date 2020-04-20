@@ -1,0 +1,9 @@
+include ../calc-cta/calc-cta
+include ../feedback/feedback
+
+mixin feedback-calc
+  section.feedback-calc.container
+    .wrapper
+      .feedback-calc__wrapper
+        +calc-cta
+        +feedback('Не можете определиться?')

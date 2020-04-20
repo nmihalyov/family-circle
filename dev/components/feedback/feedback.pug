@@ -1,0 +1,8 @@
+mixin feedback(heading)
+  form.feedback(action="")
+    p.feedback__heading= heading
+    p.feedback__desc Оставьте свой контакт, и наш специалист свяжется с вами через несколько минут.
+    input.feedback__input(type="text", name="name", placeholder="Введите ваше имя", required)
+    input.feedback__input(type="tel", name="phone", placeholder="Введите телефон", required)
+    +button-minor('submit', 'Отправить заявку', 'feedback__btn')
+    p.feedback__disclaimer Нажимая на кнопку «Отправить заявку», я даю согласие на обработку Персональных данных и&nbsp;соглашаюсь c Политикой конфиденциальности

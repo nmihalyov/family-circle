@@ -4,6 +4,8 @@ include ../components/banner/banner
 include ../components/manufacturers/manufacturers
 include ../components/hits/hits
 include ../components/advantages/advantages
+include ../components/scheme/scheme
+include ../components/feedback-calc/feedback-calc
 include ../components/footer/footer
 
 doctype
@@ -21,4 +23,25 @@ html(lang="ru", prefix="og: http://ogp.me/ns#")
       +manufacturers
       +hits
       +advantages
+      +scheme
+      +feedback-calc
+      section.description.container
+        .description__wrapper.wrapper
+          .description__col
+            +heading('Септик', 'description__heading')
+            p.description__subheading Что это такое?
+            p.description__text Септик – это автономная канализация, которая состоит из надежных пластиковых труб, не&nbsp;подверженных коррозии и уникальной очистной системы - главного элемента очистной системы Топас.
+            p.description__subheading Какие возможности даёт септик?
+            p.description__text Именно он даст вам возможность провести в дом канализацию, которая сможет выдерживать ту&nbsp;же нагрузку, что и канализация в городской квартире, и даже больше. Система абсолютно экологична, с степенью очистки 98%. Очистка происходит биологичным способом, благодаря бактериям, которые питаются грязью.<br><br>В результате остается только полезный, насыщенный минералами ил, подходящий, как&nbsp;удобрения, для приусадебного участка. Теперь вам не надо будет строить около дома выгребную яму, которая будет вам создавать дискомфорт и проблемы по ее очистке.
+          .description__col
+            +heading('особенности септиков', 'description__heading')
+            p.description__subheading Производители
+            ul.description__list
+              li.description__list-item Топас
+              li.description__list-item Био Дека
+              li.description__list-item Юнилос
+              li.description__list-item Росток
+            p.description__text Как видим, у системы автономной канализации для вашего загородного дома есть множество достоинств. Вы сможете сэкономить деньги и время, быть уверенным в надежности и&nbsp;безопасности вашей канализации. Она не будет мешать вам посторонними запахами или&nbsp;звуками, а просто тихо выполнять свою работу. 
+            p.description__subheading Производители
+            p.description__text Также нужно помнить, что большинство участков продаются без коммуникаций и у вас есть возможность решить эту проблему по-своему – дешево и надежно.
       +footer

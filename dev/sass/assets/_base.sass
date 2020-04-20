@@ -25,6 +25,44 @@ h1, h2, h3, h4, h5, h6
     margin: 0 auto
     padding: 0 50px
 
+.description
+  padding: 65px 0
+  &__wrapper
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    color: $grey
+  &__col
+    width: 570px
+  &__heading
+    margin-bottom: 20px
+  &__subheading
+    margin-bottom: 20px
+    font-weight: 500
+  &__text
+    line-height: 18px
+    font-size: 12px
+    &:not(:last-child)
+      margin-bottom: 30px
+  &__list
+    margin: 0 0 20px
+    padding-left: 8px
+    &-item
+      position: relative
+      display: block
+      line-height: 18px
+      font-size: 12px
+      &:before
+        content: ''
+        position: absolute
+        top: 8px
+        left: -8px
+        width: 3px
+        height: 3px
+        background-color: $grey
+        border-radius: 50%
+
 // @media only screen and (max-width: $tablet)
 //   body
 //     font-size: 16px
