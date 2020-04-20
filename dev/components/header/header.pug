@@ -6,7 +6,7 @@ mixin header
       .wrapper
         .header__top
           nav.header__nav
-            .header__nav-dropdown
+            .header__nav-dropdown.js-dropdown-container(data-dropdown="header-services")
               a.header__nav-link.js-dropdown-button(href="#") Услуги
               .header__nav-dropdown-menu.js-dropdown-menu
                 a.header__nav-dropdown-item(href="#") Откачка септиков
@@ -25,7 +25,15 @@ mixin header
         .header__bottom
           img.header__logo(src="img/logo.svg", alt="Семейный круг")
           p.header__desc Установка и обслуживание систем канализации
-          +button-primary('link', 'Каталог', 'header__btn', {link: 'catalog.html'})
+          .header__catalog.js-dropdown-container(data-dropdown="header-catalog")
+            +button-primary('link', 'Каталог', 'header__btn js-dropdown-button', {link: '#'})
+            .header__catalog-dropdown.js-dropdown-menu
+              a.header__catalog-dropdown-item(href="#") Септики
+              a.header__catalog-dropdown-item(href="#") Автономная канализация
+              a.header__catalog-dropdown-item(href="#") Локальные очистные сооружения
+              a.header__catalog-dropdown-item(href="#") Станции биологической очистки
+              a.header__catalog-dropdown-item(href="#") Запчасти и оборудование
+              a.header__catalog-dropdown-item(href="#") Бактерии для септиков
           form.header__search
             .header__search-label
               input.header__search-input.js-header-search(type="text", name="q", placeholder="Поиск по септикам", autocomplete="off")

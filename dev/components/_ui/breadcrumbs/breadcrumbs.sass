@@ -1,0 +1,29 @@
+.breadcrumbs
+  padding: 30px 0
+  &__item
+    text-decoration: none
+    line-height: 18px
+    font-size: 12px
+    &:not(:last-child)
+      position: relative
+      margin-right: 10px
+      padding-right: 15px
+      color: $blue
+      transition: color .3s ease
+      &:hover
+        color: darken($blue, 7)
+      &:after
+        content: ''
+        position: absolute
+        top: 3px
+        right: -2px
+        width: 9px
+        height: 8px
+        background:
+          image: url('data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%228%22%20viewBox%3D%220%200%209%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M8.35355%204.35355C8.54882%204.15829%208.54882%203.84171%208.35355%203.64645L5.17157%200.464466C4.97631%200.269204%204.65973%200.269204%204.46447%200.464466C4.2692%200.659728%204.2692%200.976311%204.46447%201.17157L7.29289%204L4.46447%206.82843C4.2692%207.02369%204.2692%207.34027%204.46447%207.53553C4.65973%207.7308%204.97631%207.7308%205.17157%207.53553L8.35355%204.35355ZM0%204.5H8V3.5H0V4.5Z%22%20fill%3D%22black%22%20fill-opacity%3D%220.45%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+          size: contain
+          position: center
+          repeat: no-repeat
+    &:last-child
+      pointer-events: none
+      color: $grey

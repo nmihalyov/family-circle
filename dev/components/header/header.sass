@@ -80,6 +80,17 @@
     color: rgba(0, 0, 0, .5)
     line-height: 18px
     font-size: 12px
+  &__catalog
+    position: relative
+    &-dropdown
+      position: absolute
+      top: 60px
+      left: 0
+      display: none
+      width: 300px
+      @include dropdown
+      &-item
+        @include dropdown-item
   &__btn
     position: relative
     min-width: 145px

@@ -1,10 +1,12 @@
 // dropdown handling
-$('.js-dropdown-button').on('click', function () {
+$('.js-dropdown-button').on('click', function (e) {
+  e.preventDefault();
+  $('.js-dropdown-menu').not($(this).next('.js-dropdown-menu')).slideUp(300);
   $(this).next('.js-dropdown-menu').slideToggle(300);
 });
 
 $(document).on('click', e => {
-	if(!$(e.target).closest('.header__nav-dropdown').length) {
+	if(!$(e.target).closest('.js-dropdown-container').length) {
 		$('.js-dropdown-menu').slideUp(300);
 	}
 });

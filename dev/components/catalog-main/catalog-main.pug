@@ -1,0 +1,16 @@
+include ../_ui/breadcrumbs/breadcrumbs
+include ../_ui/heading/heading
+include ../_ui/tags/tags
+include ../_ui/category-card/category-card
+
+mixin catalog-main
+  section.catalog-main.container
+    .wrapper
+      +breadcrumbs([{title: 'Семейный круг', link: '/'}, {title: 'Каталог', link: 'catalog.html'}])
+      +heading('Каталог')
+      +tags(['для дачи', 'без откачки', 'энергонезависимые', 'для высоких грунтовых вод', 'большой', 'автономная канализация', 'станции биологичекской очистки'])
+      .catalog-main__grid
+        +category-card('img/inhtml/categories/1.png', 'Септики', 'catalog-inner.html')
+        +category-card('img/inhtml/categories/2.png', 'Локальные очистные сооружения', 'catalog-inner.html')
+        +category-card('img/inhtml/categories/3.png', 'Запчасти и оборудование', 'catalog-inner.html')
+        +category-card('img/inhtml/categories/4.png', 'Бактерии для септиков', 'catalog-inner.html')

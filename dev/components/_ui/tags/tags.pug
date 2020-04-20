@@ -1,0 +1,7 @@
+mixin tags(items)
+  .tags
+    each item, i in items
+      if i === 0
+        button.tags__item.tags__item--selected.js-tag(data-value=item)= item
+      else
+        button.tags__item.js-tag(data-value=item)= item
