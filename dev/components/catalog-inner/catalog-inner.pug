@@ -1,0 +1,24 @@
+include ../_ui/breadcrumbs/breadcrumbs
+include ../_ui/heading/heading
+include ../_ui/tags/tags
+include ../_ui/item-card/item-card
+include ../_ui/pagination/pagination
+include ../_ui/sorting/sorting
+include ../_ui/filters/filters
+
+mixin catalog-inner-table
+  section.catalog-inner.container
+    .catalog-inner__wrapper.wrapper
+      main.catalog-inner__main
+        +breadcrumbs([{title: 'Семейный круг', link: '/'}, {title: 'Каталог', link: 'catalog.html'}, {title: 'Септики', link: 'catalog-inner.html'}])
+        +tags(['для дачи', 'без откачки', 'энергонезависимые', 'для высоких грунтовых вод', 'большой'])
+        +heading('Септики')
+        +sorting('table')
+        .catalog-inner__grid
+          - for (let i = 6; i--;)
+            +item-card('img/inhtml/items/1.png', 'hit', 'Септик', '1 000 л', 'Росток Мини', 4, 14, '26 800', 'item-1')
+            +item-card('img/inhtml/items/2.png', 'hit', 'Септик', '1 000 л', 'Коло Веси 5', 4, 14, '157 900', 'item-2')
+            +item-card('img/inhtml/items/3.png', 'hit', 'Септик', '1 000 л', 'Юнилос Астра 3', 4, 14, '65 450', 'item-3')
+        +pagination
+      aside.catalog-inner__aside
+        +filters

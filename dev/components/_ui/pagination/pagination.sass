@@ -1,0 +1,42 @@
+.pagination
+  display: flex
+  flex-flow: row nowrap
+  justify-content: center
+  align-items: center
+  &__page
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    width: 36px
+    height: 36px
+    margin: 0 4px
+    border-radius: 50%
+    border: 1px solid $blue
+    color: $blue
+    text-decoration: none
+    transition: all .3s ease
+    font-size: 12px
+    &--current
+      pointer-events: none
+      background-color: $blue
+      color: #fff
+    &:hover
+      background-color: $blue
+      color: #fff
+  &__arrow
+    width: 6px
+    height: 9px
+    background:
+      image: url('data:image/svg+xml,%3Csvg%20width%3D%226%22%20height%3D%229%22%20viewBox%3D%220%200%206%209%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M4.74704%207.80141L1.00875%204.48099L4.3369%200.749589%22%20stroke%3D%22%23005C9E%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      size: contain
+      position: center
+      repeat: no-repeat
+    &--prev
+      margin-right: 12px
+    &--next
+      margin-left: 12px
+      transform: rotate(180deg)
+    &--disabled
+      pointer-events: none
+      background-image: url('data:image/svg+xml,%3Csvg%20width%3D%225%22%20height%3D%229%22%20viewBox%3D%220%200%205%209%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M4.53499%200.743673L0.99577%204.27551L4.53499%207.80735%22%20stroke%3D%22black%22%20stroke-opacity%3D%220.45%22%2F%3E%0A%3C%2Fsvg%3E%0A')

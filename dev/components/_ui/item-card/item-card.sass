@@ -5,7 +5,12 @@
   height: 420px
   border-radius: 5px
   background-color: #fff
+  &:hover
+    .item-card__btn,
+    .item-card__backdrop
+      opacity: 1
   &__label
+    z-index: 1
     position: absolute
     top: 30px
     left: 30px
@@ -20,6 +25,27 @@
     &--hit
       background-color: $green
       color: #fff
+  &__btn
+    z-index: 2
+    opacity: 0
+    position: absolute
+    top: 105px
+    left: calc(50% - 107px)
+    width: 215px
+    transition: all .3s ease
+  &__backdrop
+    z-index: 1
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 270px
+    height: 260px
+    background-color: rgba(0, 0, 0, .1)
+    transition: opacity .3s ease
+  &__image
+    width: 270px
+    height: 260px
   &__info
     position: relative
     height: 160px

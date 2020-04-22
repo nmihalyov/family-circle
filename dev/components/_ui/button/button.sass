@@ -6,6 +6,7 @@
   max-width: 270px
   height: 50px
   border-radius: 50px
+  border: none
   line-height: 18px
   text-decoration: none
   cursor: pointer
@@ -39,3 +40,12 @@
     &:active
       transition: none
       background-color: darken(#fff, 5)
+  &--misc
+    background-color: #fff
+    transition: background-color .3s ease
+    color: $blue
+    &:hover
+      background-color: darken(#fff, 5)
+    &:active
+      transition: none
+      background-color: darken(#fff, 7)

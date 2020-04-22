@@ -28,12 +28,12 @@ mixin header
           .header__catalog.js-dropdown-container(data-dropdown="header-catalog")
             +button-primary('link', 'Каталог', 'header__btn js-dropdown-button', {link: '#'})
             .header__catalog-dropdown.js-dropdown-menu
-              a.header__catalog-dropdown-item(href="#") Септики
-              a.header__catalog-dropdown-item(href="#") Автономная канализация
-              a.header__catalog-dropdown-item(href="#") Локальные очистные сооружения
-              a.header__catalog-dropdown-item(href="#") Станции биологической очистки
-              a.header__catalog-dropdown-item(href="#") Запчасти и оборудование
-              a.header__catalog-dropdown-item(href="#") Бактерии для септиков
+              a.header__catalog-dropdown-item(href="catalog-inner.html") Септики
+              a.header__catalog-dropdown-item(href="catalog-inner.html") Автономная канализация
+              a.header__catalog-dropdown-item(href="catalog-inner.html") Локальные очистные сооружения
+              a.header__catalog-dropdown-item(href="catalog-inner.html") Станции биологической очистки
+              a.header__catalog-dropdown-item(href="catalog-inner.html") Запчасти и оборудование
+              a.header__catalog-dropdown-item(href="catalog-inner.html") Бактерии для септиков
           form.header__search
             .header__search-label
               input.header__search-input.js-header-search(type="text", name="q", placeholder="Поиск по септикам", autocomplete="off")

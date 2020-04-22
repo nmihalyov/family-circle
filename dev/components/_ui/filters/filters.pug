@@ -1,0 +1,67 @@
+include ../checkbox/checkbox
+
+mixin filters
+  form.filters(action="")
+    .filters__item
+      .filters__item-head.js-filter
+        p.filters__item-heading Производитель
+      .filters__item-content
+        +checkbox('manufacturer', 'filters__item-unit', false, false, 'Топас')
+        +checkbox('manufacturer', 'filters__item-unit', false, false, 'Коло')
+        +checkbox('manufacturer', 'filters__item-unit', false, false, 'Веси')
+        +checkbox('manufacturer', 'filters__item-unit', false, false, 'Юнилос')
+        +checkbox('manufacturer', 'filters__item-unit', false, false, 'Астра')
+        +checkbox('manufacturer', 'filters__item-unit', false, false, 'Росток')
+        +checkbox('manufacturer', 'filters__item-unit', false, false, 'Танк')
+        +checkbox('manufacturer', 'filters__item-unit filters__item-unit--hidden', false, false, 'Термит')
+        +checkbox('manufacturer', 'filters__item-unit filters__item-unit--hidden', false, false, 'Атлант')
+        +checkbox('manufacturer', 'filters__item-unit filters__item-unit--hidden', false, false, 'Волгарь')
+        +checkbox('manufacturer', 'filters__item-unit filters__item-unit--hidden', false, false, 'Кристалл')
+        a.filters__item-more.js-more(href="#") Показать все
+    .filters__item
+      .filters__item-head.js-filter
+        p.filters__item-heading Назначение
+      .filters__item-content
+        +checkbox('apointment', 'filters__item-unit', false, false, 'Для дачи')
+        +checkbox('apointment', 'filters__item-unit', false, false, 'Для частного дома')
+        +checkbox('apointment', 'filters__item-unit', false, false, 'Для бани')
+        +checkbox('apointment', 'filters__item-unit', false, false, 'Для туалета')
+        +checkbox('apointment', 'filters__item-unit', false, false, 'Для выгребных ям')
+    .filters__item
+      .filters__item-head.js-filter
+        p.filters__item-heading Особенности
+      .filters__item-content
+        +checkbox('features', 'filters__item-unit', false, false, 'Без откачки')
+        +checkbox('features', 'filters__item-unit', false, false, 'Без электричества')
+        +checkbox('features', 'filters__item-unit', false, false, 'Бюджетные')
+        +checkbox('features', 'filters__item-unit', false, false, 'Вертикальные')
+        +checkbox('features', 'filters__item-unit', false, false, 'Горизонтальные')
+        +checkbox('features', 'filters__item-unit filters__item-unit--hidden', false, false, 'Для непостоянного проживания')
+        +checkbox('features', 'filters__item-unit filters__item-unit--hidden', false, false, 'Для постоянного проживания')
+        +checkbox('features', 'filters__item-unit filters__item-unit--hidden', false, false, 'Маленькие')
+        +checkbox('features', 'filters__item-unit filters__item-unit--hidden', false, false, 'Накопительные')
+        a.filters__item-more.js-more(href="#") Показать все
+    .filters__item
+      .filters__item-head.js-filter
+        p.filters__item-heading Материал
+      .filters__item-content
+        +checkbox('material', 'filters__item-unit', false, false, 'Пластиковые')
+        +checkbox('material', 'filters__item-unit', false, false, 'Стеклопластиковые')
+        +checkbox('material', 'filters__item-unit', false, false, 'Металлические')
+    .filters__item
+      .filters__item-head.js-filter
+        p.filters__item-heading Количество пользователей
+      .filters__item-content
+        +checkbox('users', 'filters__item-unit', false, false, '2')
+        +checkbox('users', 'filters__item-unit', false, false, '3')
+        +checkbox('users', 'filters__item-unit', false, false, '4')
+        +checkbox('users', 'filters__item-unit', false, false, '5')
+        +checkbox('users', 'filters__item-unit', false, false, '6')
+        +checkbox('users', 'filters__item-unit', false, false, '8')
+    .filters__item
+      .filters__item-head.js-filter
+        p.filters__item-heading Количество камер
+      .filters__item-content
+        +checkbox('cells', 'filters__item-unit', false, false, 'Однокамерные')
+        +checkbox('cells', 'filters__item-unit', false, false, 'Двухкамерные')
+        +checkbox('cells', 'filters__item-unit', false, false, 'Трехкамерные')

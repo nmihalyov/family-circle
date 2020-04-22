@@ -1,7 +1,11 @@
-mixin item-card(image, label, type, char, name, rating, feedbacks, price)
+include ../button/button
+
+mixin item-card(image, label, type, char, name, rating, feedbacks, price, popup)
   .item-card
     if label === 'hit'
       .item-card__label.item-card__label--hit Хит
+    +button-misc('popup', 'Быстрый просмотр', 'item-card__btn', {popup: popup})
+    .item-card__backdrop
     img.item-card__image(src=image, alt="")
     .item-card__info
       .item-card__desc

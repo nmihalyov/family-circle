@@ -1,0 +1,71 @@
+.sorting
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: center
+  margin-top: -25px
+  margin-bottom: 25px
+  color: $grey
+  line-height: 18px
+  font-size: 12px
+  &__type
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    &-item
+      height: 18px
+      margin-left: 8px
+      padding: 0
+      border: none
+      box-shadow: none
+      outline: 0
+      cursor: pointer
+      transition: color .3s ease
+      &:hover
+        color: $black
+      &--current
+        pointer-events: none
+        color: $black
+  &__view
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    &-total
+      margin-right: 5px
+    &-item
+      width: 14px
+      height: 14px
+      margin-left: 10px
+      border: none
+      box-shadow: none
+      outline: 0
+      cursor: pointer
+      transition: background-image .3s ease
+      background:
+        size: contain
+        position: center
+        repeat: no-repeat
+      &:before
+        content: ''
+        display: block
+        width: 0
+        height: 0
+      &--list
+        background-image: url('../img/icons/list-grey.svg')
+        &:before
+          background-image: url('../img/icons/list-blue.svg')
+        &:hover,
+        &.sorting__view-item--current
+          background-image: url('../img/icons/list-blue.svg')
+      &--table
+        background-image: url('../img/icons/table-grey.svg')
+        &:before
+          background-image: url('../img/icons/table-blue.svg')
+        &:hover,
+        &.sorting__view-item--current
+          background-image: url('../img/icons/table-blue.svg')
+      &--current
+        pointer-events: none
+        color: $black

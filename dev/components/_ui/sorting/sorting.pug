@@ -1,0 +1,13 @@
+mixin sorting(type)
+  .sorting
+    .sorting__type
+      p.sorting__type-heading Сортировать
+      button.sorting__type-item.sorting__type-item--current.js-sorting-type по умолчанию
+      button.sorting__type-item.js-sorting-type по цене
+      button.sorting__type-item.js-sorting-type по названию
+      button.sorting__type-item.js-sorting-type по рейтингу
+      button.sorting__type-item.js-sorting-type по размеру скидки
+    .sorting__view
+      .sorting__view-total 117 товаров
+      a.sorting__view-item.sorting__view-item--list(class=`${type === 'list' ? 'sorting__view-item--current' : ''}`, href="catalog-inner-list.html")
+      a.sorting__view-item.sorting__view-item--table(class=`${type === 'table' ? 'sorting__view-item--current' : ''}`, href="catalog-inner-list.html")

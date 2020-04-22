@@ -1,0 +1,127 @@
+.popup
+  z-index: 999999
+  position: fixed
+  top: 0
+  left: 0
+  display: none
+  width: 100%
+  height: 100%
+  &__container
+    position: relative
+    width: 100%
+    height: 100%
+    padding: 50px 0
+    overflow: scroll
+    cursor: pointer
+  &__backdrop
+    z-index: 1
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: $grey
+  &__wrapper
+    z-index: 2
+    position: relative
+    min-height: 100%
+    width: 100%
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+  &__window
+    position: relative
+    background-color: #fff
+    border-radius: 5px
+    cursor: auto
+  &__item
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 970px
+    padding: 50px 30px 50px
+    &-slider
+      position: relative
+      overflow: hidden
+      width: 520px
+      border-radius: 5px
+      .slick-slide
+        outline: 0
+      &-slide
+        display: block
+        width: 520px
+      height: 520px
+      &-arrow
+        z-index: 2
+        position: absolute
+        top: calc(50% - 15px)
+        width: 30px
+        height: 30px
+        border: none
+        opacity: 0.2
+        outline: 0
+        cursor: pointer
+        transition: opacity .3s ease
+        background:
+          image: url('../img/icons/caret-black.svg')
+          color: transparent
+          position: center
+          repeat: no-repeat
+        &:hover
+          opacity: 0.8
+        &--prev
+          left: 35px
+        &--next
+          right: 35px
+          transform: rotate(180deg)
+      &-dots
+        position: absolute
+        bottom: 30px
+        left: 50%
+        display: flex
+        flex-flow: row nowrap
+        margin: 0
+        transform: translateX(-50%)
+        li
+          display: block
+          width: 7px
+          height: 7px
+          border-radius: 50%
+          background-color: $grey
+          transition: all .3s ease
+          cursor: pointer
+          &:not(:last-child)
+            margin-right: 12px
+          &.slick-active
+            background-color: $blue
+            transform: scale(1.3)
+    &-info
+      width: 305px
+    &-heading
+      margin-bottom: 40px
+    &-table
+      margin-bottom: 40px
+      line-height: 18px
+      font-size: 12px
+      &-row
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-start
+        align-items: flex-start
+        margin-bottom: 15px
+        &--bottom
+          align-items: flex-end
+      &-cell
+        &:first-child
+          width: 140px
+          padding-right: 15px
+          color: $grey
+        &:last-child
+          width: 165px
+    &-add
+      width: 230px
+      margin-bottom: 20px
+    &-more
+      width: 230px

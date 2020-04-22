@@ -1,6 +1,8 @@
 mixin button-primary(type, text, className, options)
   if type === 'link'
     a.button.button--primary(class=`${className ? className : ''}`, href=options.link)= text
+  else if type === 'button'
+    button.button.button--primary(class=`${className ? className : ''}`)= text
 
 mixin button-secondary(type, text, className, options)
   if type === 'link'
@@ -11,3 +13,7 @@ mixin button-minor(type, text, className, options)
     a.button.button--minor(class=`${className ? className : ''}`, href=options.link)= text
   else if type === 'submit'
     button.button.button--minor(class=`${className ? className : ''}`, type='submit')= text
+
+mixin button-misc(type, text, className, options)
+  if type === 'popup'
+    button.button.button--misc.js-open-popup(class=`${className ? className : ''}`, data-popup=options.popup)= text

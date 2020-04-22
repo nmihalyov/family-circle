@@ -1,0 +1,22 @@
+include ../components/header/header
+include ../components/calc/calc
+include ../components/catalog-inner/catalog-inner
+include ../components/footer/footer
+include ../components/_ui/popup/popup
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Семейный круг | Септики
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +calc
+      +catalog-inner-table
+      +footer
+    +popup('item', 'item-1')
+    +popup('item', 'item-2')
+    +popup('item', 'item-3')

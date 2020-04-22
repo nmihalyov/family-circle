@@ -1,0 +1,8 @@
+mixin checkbox(name, className, required, checked, text)
+  label.checkbox(class=`${className ? className : ''}`)
+    input.checkbox__input(type="checkbox", name=name, required=required, checked=checked)
+    .checkbox__box
+      include ../../../img/icons/check.svg
+    p.checkbox__text!= text
+    //- if error
+    //-   p.checkbox__error= error

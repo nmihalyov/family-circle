@@ -1,0 +1,42 @@
+mixin popup(type, id)
+  .popup.js-popup(data-popup=id)
+    .popup__backdrop
+    .popup__container.js-close-popup
+      .popup__wrapper
+        if type === 'item'
+          .popup__window.popup__item
+            .popup__item-slider.js-popup-slider
+              .popup__item-slider-slide
+                img.popup__item-slider-img(src="img/inhtml/popup/items/1.jpg", alt="")
+              .popup__item-slider-slide
+                img.popup__item-slider-img(src="img/inhtml/popup/items/1.jpg", alt="")
+              .popup__item-slider-slide
+                img.popup__item-slider-img(src="img/inhtml/popup/items/1.jpg", alt="")
+              .popup__item-slider-slide
+                img.popup__item-slider-img(src="img/inhtml/popup/items/1.jpg", alt="")
+            .popup__item-info
+              +heading('Технические характеристики', 'popup__item-heading')
+              .popup__item-table
+                .popup__item-table-row
+                  p.popup__item-table-cell Тип
+                  p.popup__item-table-cell Переливной
+                .popup__item-table-row
+                  p.popup__item-table-cell Вместимость
+                  p.popup__item-table-cell 1 куб.м
+                .popup__item-table-row
+                  p.popup__item-table-cell Материалы
+                  p.popup__item-table-cell Полиэтилен
+                .popup__item-table-row
+                  p.popup__item-table-cell Мощность
+                  p.popup__item-table-cell 300 л/сутки
+                .popup__item-table-row
+                  p.popup__item-table-cell Подсоединение
+                  p.popup__item-table-cell Выход. отверстие: 110 мм<br>Вход. отверстие: 110 мм
+                .popup__item-table-row.popup__item-table-row--bottom
+                  p.popup__item-table-cell Глубина установки входной/выходной трубы
+                  p.popup__item-table-cell 770/820 мм
+                .popup__item-table-row.popup__item-table-row--bottom
+                  p.popup__item-table-cell Количество пользователей
+                  p.popup__item-table-cell 1−3 человека
+              +button-primary('button', 'Добавить в корзину', 'popup__item-add')
+              +button-secondary('link', 'Смотреть подробнее', 'popup__item-more', {link: 'item.html'})
