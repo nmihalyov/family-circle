@@ -1,23 +1,10 @@
 .tags
-  display: flex
-  flex-flow: row wrap
-  justify-content: flex-start
-  align-items: flex-start
-  width: calc(100% + 10px)
+  @include tag-container
   margin-top: -15px
   margin-bottom: 40px
   &__item
-    height: 42px
-    margin: 0 10px 10px 0
-    padding: 0 20px
+    @include tag-item
     cursor: pointer
-    border: 2px solid $light-blue-2
-    border-radius: 5px
-    color: $blue
-    transition: all .3s ease
-    line-height: 18px
-    font-size: 12px
-    outline: 0
     &:hover
       background-color: $light-blue-2
     &:active
@@ -25,4 +12,4 @@
       border-color: darken($light-blue-2, 5)
       transition: none
     &--selected
-      background-color: $light-blue-2
+      @include tag-item-selected

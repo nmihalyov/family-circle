@@ -3,7 +3,7 @@ include ../button/button
 mixin item-card(image, label, type, char, name, rating, feedbacks, price, popup)
   .item-card
     if label === 'hit'
-      .item-card__label.item-card__label--hit Хит
+      .item-card__label Хит
     +button-misc('popup', 'Быстрый просмотр', 'item-card__btn', {popup: popup})
     .item-card__backdrop
     img.item-card__image(src=image, alt="")
@@ -21,4 +21,4 @@ mixin item-card(image, label, type, char, name, rating, feedbacks, price, popup)
       .item-card__actions
         p.item-card__price= price
           |&nbsp;&#8381;
-        a.item-card__add.js-add-item(href="#") В корзину
+        button.item-card__add.js-add-item В корзину

@@ -14,17 +14,7 @@
     position: absolute
     top: 30px
     left: 30px
-    height: 27px
-    padding: 4px 10px 3px
-    border-radius: 4px
-    text-transform: uppercase
-    line-height: 20px
-    font:
-      size: 10px
-      weight: 700
-    &--hit
-      background-color: $green
-      color: #fff
+    @include item-label
   &__btn
     z-index: 2
     opacity: 0
@@ -60,33 +50,17 @@
     font-size: 12px
   &__name
     margin-bottom: 2px
-    line-height: 18px
-    font:
-      size: 13px
-      weight: 500
+    @include item-name
   &__rating
-    display: flex
-    flex-flow: row nowrap
-    justify-content: flex-start
-    align-items: center
+    @include item-rating
   &__star
-    width: 12px
-    height: 12px
-    margin-right: 2px
-    background:
-      size: contain
-      position: center
-      repeat: no-repeat
+    @include item-star
     &--full
-      background-image: url('../img/icons/star-full.svg')
+      @include item-star-full
     &--empty
-      background-image: url('../img/icons/star-empty.svg')
+      @include item-star-empty
   &__feedbacks
-    margin-left: 3px
-    margin-bottom: -3px
-    color: #a3a3a3
-    line-height: 18px
-    font-size: 12px
+    @include item-feedbacks
   &__actions
     position: absolute
     bottom: 25px
@@ -100,29 +74,4 @@
     line-height: 20px
     font-size: 13px
   &__add
-    position: relative
-    padding-right: 22px
-    color: $blue
-    text-decoration: none
-    line-height: 15px
-    outline: 0
-    font:
-      size: 13px
-      weight: 500
-    &:hover
-      &:after
-        transform: rotate(90deg)
-    &:after
-      content: ''
-      position: absolute
-      top: 0
-      right: 0
-      display: block
-      width: 16px
-      height: 16px
-      transition: transform .3s ease
-      background:
-        image: url('data:image/svg+xml,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%228%22%20fill%3D%22%23005C9E%22%2F%3E%0A%3Cline%20x1%3D%224%22%20y1%3D%228%22%20x2%3D%2212%22%20y2%3D%228%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%0A%3Cline%20x1%3D%228%22%20y1%3D%224%22%20x2%3D%228%22%20y2%3D%2212%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E%0A')
-        size: contain
-        position: center
-        repeat: no-repeat
+    @include item-add

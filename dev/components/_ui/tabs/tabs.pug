@@ -1,0 +1,7 @@
+mixin tabs(items, className)
+  .tabs(class=`${className ? className : ''}`)
+    each item, i in items
+      if i === 0
+        button.tabs__item.tabs__item--active.js-tab(data-tab=item.tab)= item.name
+      else
+        button.tabs__item.js-tab(data-tab=item.tab)= item.name

@@ -19,6 +19,21 @@ const showOverflow = () => {
   window.scrollTo(0, topOffset);
 };
 
+const closePopup = (e, $this) => {
+  if(!$(e.target).closest('.popup__window').length || !$this.hasClass('js-popup')) {
+    showOverflow();
+  
+    $this.closest('.js-popup').hide(0);
+
+    // popup slider destroy
+    const $slider = $this.find('.js-popup-slider');
+
+    if ($slider.length) {
+      $slider.slick('unslick');
+    }
+	}
+};
+
 $('body').on('click', '.js-open-popup', function () {
   const $this = $(this);
   const target = $this.attr('data-popup');
@@ -28,7 +43,7 @@ $('body').on('click', '.js-open-popup', function () {
   
   $popup.fadeIn(300);
 
-  // popup slider
+  // popup slider init
   const $slider = $popup.find('.js-popup-slider');
 
   if ($slider.length && !$slider.hasClass('slick-initialized')) {
@@ -44,11 +59,60 @@ $('body').on('click', '.js-open-popup', function () {
 });
 
 $('.js-close-popup').on('click', function (e) {
+  closePopup(e, $(this));
+});
+
+// feedback handling
+$('.js-feedback-send').on('click', function (e) {  
+  const $this = $(this);
+  const $formInputs = $this.parent().find('input[required], textarea[required]');
+  let isValid = true;
+  $formInputs.map((i, el) => el.value === '' && (isValid = false));
+  
+  if (isValid) {
+    e.preventDefault();
+    closePopup(e, $this);
+    $formInputs.val('');
+    $('.js-feedback-star').removeClass(fullStarClass).addClass(emptyStarClass);
+    $('.js-feedback-eval').hide(0);
+  }
+});
+
+// feedback rating
+const fullStarClass = 'popup__feedback-rating-star--full';
+const emptyStarClass = 'popup__feedback-rating-star--empty';
+const evals = ['ужасно', 'очень плохо', 'плохо', 'хорошо', 'отлично'];
+
+$('.js-feedback-star').on('mouseenter', function () {
   const $this = $(this);
 
-  if(!$(e.target).closest('.popup__window').length) {
-    showOverflow();
-  
-    $this.closest('.js-popup').hide(0);
-	}
+  $this.removeClass(emptyStarClass);
+  $this.prevAll().removeClass(emptyStarClass);
+  $this.addClass(fullStarClass);
+  $this.prevAll().addClass(fullStarClass);
+  $this.nextAll().removeClass(fullStarClass);
+  $this.nextAll().addClass(emptyStarClass);
+});
+
+$('.js-feedback-star').on('click', function () {
+  const $this = $(this);
+  const updatedRating = $this.attr('data-rating');
+
+  $this.parent().attr('data-rating', updatedRating);
+  $('.js-feedback-eval').show(0).find('span').text(evals[updatedRating - 1]);
+});
+
+$('.js-feedback-star').on('mouseleave', function () {
+  const $this = $(this);
+  const rating = $this.parent().attr('data-rating');
+
+  $('.js-feedback-star').map(function () {
+    if (+$(this).attr('data-rating') <= +rating) {
+      $(this).removeClass(emptyStarClass);
+      $(this).addClass(fullStarClass);
+    } else {
+      $(this).removeClass(fullStarClass);
+      $(this).addClass(emptyStarClass);
+    }
+  });
 });

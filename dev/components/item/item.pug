@@ -1,0 +1,145 @@
+include ../_ui/tabs/tabs
+include ../_ui/button/button
+
+mixin item
+  .item
+    .item__col
+      p.item__label Лидер продаж
+      .item__slider.js-item-slider
+        .item__slider-slide
+          img.item__slider-img(src="img/inhtml/item/1.jpg", alt="")
+        .item__slider-slide
+          img.item__slider-img(src="img/inhtml/item/1.jpg", alt="")
+        .item__slider-slide
+          img.item__slider-img(src="img/inhtml/item/1.jpg", alt="")
+        .item__slider-slide
+          img.item__slider-img(src="img/inhtml/item/1.jpg", alt="")
+      .item__content
+        .item__tabs
+          +tabs([{name: 'Описание', tab: 'desc'}, {name: 'Особенности', tab: 'features'}, {name: 'Комплектация', tab: 'equipment'}, {name: 'Упакованный товар', tab: 'package'}, {name: 'Отзывы', tab: 'feedbacks'}], 'item__tabs-switch')
+          .item__tabs-contents
+            .item__tabs-content.js-tab-content(data-tab="desc")
+              p.item__tabs-text Септик Rostok Мини — это трехкамерная емкость с комплектом канализационных труб и фасонных элементов. Он имеет массу преимуществ: энергонезависим, экологичен, практичен и требует минимального обслуживания.<br><br>В камерах септика проводится осветление поступивших стоков под воздействием силы тяжести. Впускной трубопровод имеет особую конструкцию, благодаря которой снижается попадание взвесей в следующие камеры и степень взмучивания осадка. Приобретайте септик Rostok Мини, он гарантирует степень очистки стоков до 90%, а концентрация взвешенных веществ на выходе составляет 33 мг/л.
+            .item__tabs-content.js-tab-content(data-tab="features")
+              p.item__tabs-text Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro sapiente voluptatum rem repellat alias quos, nemo distinctio, nostrum quas suscipit dolorum laudantium id maxime ipsa exercitationem odit facere. Eaque, consequatur!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, dolores vero. Excepturi perspiciatis soluta tempora?<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem eius odit placeat laudantium tempora temporibus voluptates sint, reiciendis quibusdam obcaecati! Commodi dolorum, eligendi, harum dolorem in tenetur mollitia ullam, alias quisquam laboriosam dolores. Cupiditate, consectetur provident. Velit veritatis itaque mollitia.
+            .item__tabs-content.js-tab-content(data-tab="equipment")
+              p.item__tabs-text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia facilis qui ducimus labore consequatur, provident impedit eos dolorem optio dolores, laboriosam facere perspiciatis maxime inventore quia earum, sapiente voluptatem explicabo quo temporibus dolore. Fugit recusandae doloremque minus itaque aut pariatur, aspernatur incidunt adipisci velit magnam perspiciatis inventore eligendi quibusdam quisquam veritatis! Quis deleniti voluptas nesciunt maiores esse molestias sapiente voluptatem ullam reiciendis, et perferendis accusantium velit odio recusandae. Laboriosam sed odit natus sunt corporis, numquam explicabo odio quae veniam perferendis!<br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam ratione eum repellendus ut eos deserunt praesentium. Dolorem beatae et sint.
+            .item__tabs-content.js-tab-content(data-tab="package")
+              .item__package
+                .item__package-specs
+                  .item__package-spec
+                    span Длина
+                    span 4 метра
+                  .item__package-spec
+                    span Ширина
+                    span 1.7 метра
+                  .item__package-spec
+                    span Высота
+                    span 2 метра
+            .item__tabs-content.js-tab-content(data-tab="feedbacks")
+              .item__feedback
+                .item__feedback-info
+                  .item__feedback-count
+                    .item__feedback-rating
+                      .item__feedback-star.item__feedback-star--full
+                      .item__feedback-star.item__feedback-star--full
+                      .item__feedback-star.item__feedback-star--full
+                      .item__feedback-star.item__feedback-star--full
+                      .item__feedback-star.item__feedback-star--empty
+                    p.item__feedback-total 3 отзыва
+                  p.item__feedback-desc Для расчёта рейтинга используются общие оценки товара за всё время.
+                  +button-secondary('popup', 'Оставить комменатрий', 'item__feedback-btn', {popup: 'feedback'})
+                .item__feedback-list
+                  .item__feedback-review
+                    p.item__feedback-review-name Александр
+                    .item__feedback-review-rating
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--empty
+                      p.item__feedback-review-date 12.10.2019
+                    p.item__feedback-review-text Закал этот септик по рекомендации друзей. Ставил в загородном доме. Системой пользуется 5 человек. Очень доволен. Септику уже 3 года, никаких претензий. Рекомендую!
+                  .item__feedback-review
+                    p.item__feedback-review-name Юлия
+                    .item__feedback-review-rating
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--empty
+                      p.item__feedback-review-date 18.07.2019
+                    p.item__feedback-review-text Поставили септик на даче. Через два года пластик начал трескаться в некоторых мест. В компании сказали что такое бывает и что ничего страшного в этом нет, но все же не приятно, ставлю оценку 3.
+                  .item__feedback-review
+                    p.item__feedback-review-name Петр
+                    .item__feedback-review-rating
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--full
+                      .item__feedback-review-star.item__feedback-review-star--empty
+                      p.item__feedback-review-date 03.06.2019
+                    p.item__feedback-review-text Закал этот септик по рекомендации друзей. Ставил в загородном доме. Системой пользуется 5 человек. Очень доволен. Септику уже 3 года, никаких претензий. Рекомендую!
+    .item__col
+      h1.item__name Септик Росток мини
+      p.item__desc Артикул / модель: 611.0000.899.0
+      .item__rating
+        .item__star.item__star--full
+        .item__star.item__star--full
+        .item__star.item__star--full
+        .item__star.item__star--full
+        .item__star.item__star--empty
+        p.item-card__feedbacks 3
+      .item__price.item__price--current.js-price(data-option="1") 26 800 &#8381;
+        span.item__price-old 29 800 &#8381;
+      .item__price.js-price(data-option="2") 76 350 &#8381;
+      .item__options
+        p.item__option.item__option--current.js-item-option(data-option="1") без установки<br>26 800 &#8381;
+        p.item__option.js-item-option(data-option="2") с установкой<br>76 350 &#8381;
+      .item__count
+        p.item__count-heading Укажите количество:
+        button.item__count-btn.item__count-btn--remove.js-count-remove
+        span.item__count-value.js-count-value 1
+        button.item__count-btn.item__count-btn--add.js-count-add
+      +button-primary('button', 'Добавить в корзину', 'item__cart js-cart-add')
+      +button-cart('Добавлено в корзину', 'item__cart')
+      p.item__subheading Технические характеристики
+      .item__table
+        .item__table-row
+          p.item__table-cell Тип
+          p.item__table-cell Переливной
+        .item__table-row
+          p.item__table-cell Вместимость
+          p.item__table-cell 1 куб.м
+        .item__table-row
+          p.item__table-cell Материалы
+          p.item__table-cell Полиэтилен
+        .item__table-row
+          p.item__table-cell Мощность
+          p.item__table-cell 300 л/сутки
+        .item__table-row
+          p.item__table-cell Подсоединение
+          p.item__table-cell Выход. отверстие: 110 мм<br>Вход. отверстие: 110 мм
+        .item__table-row.item__table-row--bottom
+          p.item__table-cell Глубина установки входной/выходной трубы
+          p.item__table-cell 770/820 мм
+        .item__table-row.item__table-row--bottom
+          p.item__table-cell Количество пользователей
+          p.item__table-cell 1−3 человека
+      p.item__subheading Дополнительные материалы
+      .item__docs
+        a.item__doc(href="#")
+          span.item__doc-heading Инструкции
+          span.item__doc-label PDF
+          span.item__doc-size 2.3 mb
+        a.item__doc(href="#")
+          span.item__doc-heading Схемы
+          span.item__doc-label PDF
+          span.item__doc-size 5.4 mb
+        a.item__doc(href="#")
+          span.item__doc-heading Сертификаты
+          span.item__doc-label PDF
+          span.item__doc-size 8.7 mb
+      .item__tags
+        p.item__tag без откачки
+        p.item__tag энергонезависимые

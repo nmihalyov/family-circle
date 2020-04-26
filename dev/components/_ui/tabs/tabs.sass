@@ -1,0 +1,31 @@
+.tabs
+  overflow: hidden
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-items: center
+  height: 50px
+  border: 2px solid $light-blue-2
+  border-radius: 50px
+  &__item
+    height: 100%
+    padding: 2px 22px 0
+    border: none
+    color: $blue
+    outline: 0
+    cursor: pointer
+    transition: background-color .3s ease
+    font-weight: 500
+    &--active
+      pointer-events: none
+      background-color: $light-blue-2
+    &:not(:last-child)
+      border-right: 2px solid $light-blue-2
+    &:first-child
+      padding-left: 25px
+      padding-right: 19px
+    &:last-child
+      padding-left: 20px
+      padding-right: 25px
+    &:hover
+      background-color: $light-blue-2

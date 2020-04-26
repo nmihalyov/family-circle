@@ -6,13 +6,13 @@
   display: none
   width: 100%
   height: 100%
+  cursor: pointer
   &__container
     position: relative
     width: 100%
     height: 100%
     padding: 50px 0
     overflow: scroll
-    cursor: pointer
   &__backdrop
     z-index: 1
     position: absolute
@@ -52,76 +52,88 @@
       &-slide
         display: block
         width: 520px
-      height: 520px
+        height: 520px
       &-arrow
-        z-index: 2
-        position: absolute
-        top: calc(50% - 15px)
-        width: 30px
-        height: 30px
-        border: none
-        opacity: 0.2
-        outline: 0
-        cursor: pointer
-        transition: opacity .3s ease
-        background:
-          image: url('../img/icons/caret-black.svg')
-          color: transparent
-          position: center
-          repeat: no-repeat
-        &:hover
-          opacity: 0.8
+        @include slider-arrow
         &--prev
-          left: 35px
+          @include slider-arrow-prev
         &--next
-          right: 35px
-          transform: rotate(180deg)
+          @include slider-arrow-next
       &-dots
-        position: absolute
-        bottom: 30px
-        left: 50%
-        display: flex
-        flex-flow: row nowrap
-        margin: 0
-        transform: translateX(-50%)
-        li
-          display: block
-          width: 7px
-          height: 7px
-          border-radius: 50%
-          background-color: $grey
-          transition: all .3s ease
-          cursor: pointer
-          &:not(:last-child)
-            margin-right: 12px
-          &.slick-active
-            background-color: $blue
-            transform: scale(1.3)
+        @include slider-dots
     &-info
       width: 305px
     &-heading
       margin-bottom: 40px
     &-table
-      margin-bottom: 40px
-      line-height: 18px
-      font-size: 12px
+      @include table
       &-row
-        display: flex
-        flex-flow: row nowrap
-        justify-content: flex-start
-        align-items: flex-start
-        margin-bottom: 15px
+        @include table-row
         &--bottom
-          align-items: flex-end
+          @include table-row-bottom
       &-cell
-        &:first-child
-          width: 140px
-          padding-right: 15px
-          color: $grey
-        &:last-child
-          width: 165px
-    &-add
+        @include table-cell
+    &-cart
       width: 230px
       margin-bottom: 20px
     &-more
       width: 230px
+  &__header
+    position: relative
+    background-color: $blue
+    padding: 40px 70px
+    color: #fff
+    &-heading
+      margin-bottom: 6px
+      text-transform: uppercase
+      line-height: 30px
+      font:
+        size: 20px
+        weight: 700
+    &-close
+      position: absolute
+      top: 15px
+      right: 15px
+      width: 22px
+      height: 22px
+      cursor: pointer
+      background:
+        image: url('data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2223%22%20viewBox%3D%220%200%2022%2023%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%2216.9951%22%20y%3D%226.99854%22%20width%3D%2215%22%20height%3D%222%22%20transform%3D%22rotate%28135%2016.9951%206.99854%29%22%20fill%3D%22white%22%2F%3E%0A%3Crect%20width%3D%2215%22%20height%3D%222%22%20transform%3D%22matrix%280.707107%200.707107%200.707107%20-0.707107%204.97461%206.99902%29%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+        size: contain
+        position: center
+        repeat: no-repeat
+  &__feedback
+    overflow: hidden
+    width: 570px
+    border-radius: 5px
+    &-content
+      padding: 50px 70px
+    &-rating
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+      margin-bottom: 25px
+      color: $grey
+      &-heading
+        margin-right: 15px
+        line-height: 20px
+      &-container
+        @include item-rating
+      &-star
+        @include item-star
+        width: 20px
+        height: 20px
+        margin-top: -3px
+        cursor: pointer
+        &--full
+          @include item-star-full
+        &--empty
+          @include item-star-empty
+      &-eval
+        display: none
+        margin-left: 5px
+    &-textarea
+      margin-bottom: 30px
+    &-input
+      margin-bottom: 10px

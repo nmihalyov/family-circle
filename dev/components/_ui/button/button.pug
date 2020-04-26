@@ -3,10 +3,14 @@ mixin button-primary(type, text, className, options)
     a.button.button--primary(class=`${className ? className : ''}`, href=options.link)= text
   else if type === 'button'
     button.button.button--primary(class=`${className ? className : ''}`)= text
+  else if type === 'submit'
+    button.button.button--primary(class=`${className ? className : ''}`, type="submit")= text
 
 mixin button-secondary(type, text, className, options)
   if type === 'link'
     a.button.button--secondary(class=`${className ? className : ''}`, href=options.link)= text
+  else if type === 'popup'
+    button.button.button--secondary.js-open-popup(class=`${className ? className : ''}`, data-popup=options.popup)= text
 
 mixin button-minor(type, text, className, options)
   if type === 'link'
@@ -17,3 +21,6 @@ mixin button-minor(type, text, className, options)
 mixin button-misc(type, text, className, options)
   if type === 'popup'
     button.button.button--misc.js-open-popup(class=`${className ? className : ''}`, data-popup=options.popup)= text
+
+mixin button-cart(text, className, item)
+  button.button.button--cart.js-cart-remove(class=`${className ? className : ''}`, data-item=item, data-added='false')= text

@@ -1,0 +1,46 @@
+include ../components/header/header
+include ../components/calc/calc
+include ../components/catalog-inner/catalog-inner
+include ../components/_ui/breadcrumbs/breadcrumbs
+include ../components/item/item
+include ../components/_ui/heading/heading
+include ../components/footer/footer
+include ../components/_ui/popup/popup
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Семейный круг | Карточка товара
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +calc
+      section.container
+        .wrapper
+          +breadcrumbs([{title: 'Семейный круг', link: '/'}, {title: 'Каталог', link: 'catalog.html'}, {title: 'Септики', link: 'catalog-inner.html'}, {title: 'Септик Росток мини', link: 'item.html'}])
+          +item
+      section.suggestion.container
+        .wrapper
+          +heading('Похожие товары')
+          .suggestion__grid
+            +item-card('img/inhtml/items/1.png', 'hit', 'Септик', '1 000 л', 'Росток Мини', 4, 14, '26 800', 'item-1')
+            +item-card('img/inhtml/items/2.png', 'hit', 'Септик', '1 000 л', 'Коло Веси 5', 4, 14, '157 900', 'item-2')
+            +item-card('img/inhtml/items/3.png', 'hit', 'Септик', '1 000 л', 'Юнилос Астра 3', 4, 14, '65 450', 'item-3')
+            +item-card('img/inhtml/items/4.png', 'hit', 'Септик', '1 000 л', 'Топас-С 4', 4, 14, '75 960', 'item-4')
+      section.suggestion.container
+        .wrapper
+          +heading('С этим товаром покупают')
+          .suggestion__grid
+            +item-card('img/inhtml/items/1.png', 'hit', 'Септик', '1 000 л', 'Росток Мини', 4, 14, '26 800', 'item-1')
+            +item-card('img/inhtml/items/2.png', 'hit', 'Септик', '1 000 л', 'Коло Веси 5', 4, 14, '157 900', 'item-2')
+            +item-card('img/inhtml/items/3.png', 'hit', 'Септик', '1 000 л', 'Юнилос Астра 3', 4, 14, '65 450', 'item-3')
+            +item-card('img/inhtml/items/4.png', 'hit', 'Септик', '1 000 л', 'Топас-С 4', 4, 14, '75 960', 'item-4')
+      +footer
+    +popup('item', 'item-1')
+    +popup('item', 'item-2')
+    +popup('item', 'item-3')
+    +popup('item', 'item-4')
+    +popup('feedback', 'feedback')

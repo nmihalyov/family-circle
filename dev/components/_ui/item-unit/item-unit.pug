@@ -1,0 +1,28 @@
+mixin item-unit(name, price, oldPrice, capacity, power, users, label, rating, feedbacks)
+  .item-unit
+    .item-unit_info
+      .item-unit__rating
+        - for (let i = rating; i--;)
+          .item-unit__star.item-unit__star--full
+        - for (let i = 5 - rating; i--;)
+          .item-unit__star.item-unit__star--empty
+        p.item-unit__feedbacks= feedbacks
+      .item-unit__name= name
+    .item-unit__feature.item-unit__feature--price
+      p.item-unit__feature-heading Без установки
+      p.item-unit__feature-value= price
+        |&nbsp;&#8381;
+        span.item-unit__oldprice= oldPrice
+          |&nbsp;&#8381;
+    .item-unit__feature.item-unit__feature--capacity
+      p.item-unit__feature-heading Вместимость
+      p.item-unit__feature-value= capacity
+    .item-unit__feature.item-unit__feature--power
+      p.item-unit__feature-heading Мощность
+      p.item-unit__feature-value= power
+    .item-unit__feature.item-unit__feature--users
+      p.item-unit__feature-heading Кол-во польз.
+      p.item-unit__feature-value= users
+    if label === 'hit'
+      .item-unit__label Хит
+    button.item-unit__add.js-add-item В корзину

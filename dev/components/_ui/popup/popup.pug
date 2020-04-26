@@ -1,7 +1,10 @@
+include ../textarea/textarea
+include ../input/input
+
 mixin popup(type, id)
-  .popup.js-popup(data-popup=id)
+  .popup.js-popup.js-close-popup(data-popup=id)
     .popup__backdrop
-    .popup__container.js-close-popup
+    .popup__container
       .popup__wrapper
         if type === 'item'
           .popup__window.popup__item
@@ -38,5 +41,27 @@ mixin popup(type, id)
                 .popup__item-table-row.popup__item-table-row--bottom
                   p.popup__item-table-cell Количество пользователей
                   p.popup__item-table-cell 1−3 человека
-              +button-primary('button', 'Добавить в корзину', 'popup__item-add')
+              +button-primary('button', 'Добавить в корзину', 'popup__item-cart js-cart-add')
+              +button-cart('Добавлено в корзину', 'popup__item-cart')
               +button-secondary('link', 'Смотреть подробнее', 'popup__item-more', {link: 'item.html'})
+        else if type === 'feedback'
+          .popup__window.popup__feedback
+            .popup__header
+              .popup__header-close.js-close-popup
+              p.popup__header-heading Оставьте свой отзыв
+              p.popup__header-desc Заполните данные и поставьте оценку для публикации
+            form.popup__feedback-content(action="")
+              .popup__feedback-rating
+                p.popup__feedback-rating-heading Ваша оценка:
+                .popup__feedback-rating-container(data-rating="0")
+                  .popup__feedback-rating-star.popup__feedback-rating-star--empty.js-feedback-star(data-rating="1")
+                  .popup__feedback-rating-star.popup__feedback-rating-star--empty.js-feedback-star(data-rating="2")
+                  .popup__feedback-rating-star.popup__feedback-rating-star--empty.js-feedback-star(data-rating="3")
+                  .popup__feedback-rating-star.popup__feedback-rating-star--empty.js-feedback-star(data-rating="4")
+                  .popup__feedback-rating-star.popup__feedback-rating-star--empty.js-feedback-star(data-rating="5")
+                p.popup__feedback-rating-eval.js-feedback-eval
+                  |-&nbsp;
+                  span хорошо
+              +input('text', 'name', 'Введите ваше имя', 'popup__feedback-input', true)
+              +textarea('feedback', 'Ваш комментарий', 'popup__feedback-textarea', true)
+              +button-primary('submit', 'Опубликовать комментарий', 'js-feedback-send')

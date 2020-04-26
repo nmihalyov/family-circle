@@ -1,0 +1,329 @@
+.item
+  overflow: hidden
+  display: flex
+  flex-flow: row nowrap
+  justify-content: space-between
+  align-items: flex-start
+  margin-bottom: 50px
+  background-color: #fff
+  border-radius: 5px
+  &__col
+    position: relative
+    &:first-child
+      width: 770px
+      padding-bottom: 45px
+    &:last-child
+      width: 345px
+      padding: 45px 35px 35px 0
+  &__slider
+    position: relative
+    overflow: hidden
+    width: 770px
+    margin-bottom: 45px
+    .slick-slide
+      outline: 0
+    &-slide
+      display: block
+      width: 770px
+      height: 710px
+      &:not(:last-child)
+        display: none
+    &-arrow
+      @include slider-arrow
+      &--prev
+        @include slider-arrow-prev
+      &--next
+        @include slider-arrow-next
+    &-dots
+      @include slider-dots
+  &__label
+    z-index: 2
+    position: absolute
+    top: 50px
+    left: 50px
+    @include item-label
+  &__tabs
+    padding-left: 50px
+    &-switch
+      margin-bottom: 30px
+    &-content
+      &:not(:first-child)
+        display: none
+    &-text
+      opacity: 0.8
+      color: $grey
+      line-height: 18px
+      font-size: 12px
+  &__package
+    overflow: hidden
+    position: relative
+    width: 100%
+    height: 410px
+    background-color: $light-blue
+    border-radius: 5px
+    &-specs
+      position: absolute
+      top: 30px
+      left: 30px
+      padding: 25px 30px
+      background-color: #fff
+      border-radius: 5px
+    &-spec
+      display: flex
+      flex-flow: row nowrap
+      justify-content: space-between
+      align-items: center
+      min-width: 120px
+      line-height: 18px
+      font-size: 12px
+      span:first-child
+        margin-right: 10px
+        color: $grey
+  &__feedback
+    &-info
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      padding-bottom: 30px
+      border-bottom: 1px solid $light-blue-2
+    &-count
+      min-width: 150px
+      padding-right: 15px
+    &-rating
+      @include item-rating
+      margin-bottom: 5px
+    &-star
+      @include item-star
+      width: 19px
+      height: 19px
+      margin-right: 3px
+      &--full
+        @include item-star-full
+      &--empty
+        @include item-star-empty
+    &-total
+      text-transform: uppercase
+      color: $black
+      line-height: 30px
+      font:
+        size: 20px
+        weight: 700
+    &-desc
+      opacity: 0.8
+      width: 200px
+      color: $grey
+      line-height: 18px
+      font-size: 12px
+    &-btn
+      max-width: 230px
+      margin-left: auto
+    &-review
+      padding: 20px 50px 20px 0
+      &:not(:last-child)
+        border-bottom: 1px solid $light-blue-2
+      &-name
+        margin-bottom: 1px
+        text-transform: uppercase
+        letter-spacing: 0.1em
+        line-height: 18px
+        font-size: 11px
+      &-rating
+        @include item-rating
+        margin-bottom: 10px
+      &-star
+        @include item-star
+        &--full
+          @include item-star-full
+        &--empty
+          @include item-star-empty
+      &-date
+        margin-left: 12px
+        color: $grey
+        line-height: 18px
+        font-size: 12px
+      &-text
+        line-height: 18px
+        font-size: 12px
+  &__name
+    text-transform: uppercase
+    line-height: 30px
+    font:
+      size: 20px
+      weight: 700
+  &__desc
+    opacity: 0.5
+    margin-bottom: 10px
+    color: $grey
+    line-height: 18px
+    font-size: 12px
+  &__rating
+    @include item-rating
+    margin-bottom: 20px
+  &__star
+    @include item-star
+    &--full
+      @include item-star-full
+    &--empty
+      @include item-star-empty
+  &__feedbacks
+    @include item-feedbacks
+  &__price
+    display: none
+    margin-bottom: 10px
+    line-height: 30px
+    font-size: 18px
+    &--current
+      display: block
+    &-old
+      margin-left: 5px
+      vertical-align: text-top
+      color: $grey
+      text-decoration: line-through
+      line-height: 18px
+      font-size: 12px
+  &__options
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: flex-start
+    width: 210px
+    margin-bottom: 25px
+    padding-top: 10px
+    border-top: 1px solid rgba(0, 0, 0, 0.15)
+  &__option
+    position: relative
+    color: $grey
+    cursor: pointer
+    transition: opacity .3s ease
+    line-height: 18px
+    font-size: 12px
+    &:hover
+      opacity: 0.8
+    &--current
+      pointer-events: none
+      color: $blue
+      &:before
+        content: ''
+        position: absolute
+        top: -14px
+        left: 0
+        width: 100%
+        height: 4px
+        background-color: $blue
+  &__count
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 25px
+    &-heading
+      margin-right: 15px
+      color: $grey
+      line-height: 18px
+      font-size: 12px
+    &-btn
+      position: relative
+      width: 20px
+      height: 20px
+      border: none
+      border-radius: 5px
+      background-color: $light-blue-2
+      outline: 0
+      cursor: pointer
+      transition: background-color .3s ease
+      &:before
+        content: ''
+        position: absolute
+        display: block
+        background:
+          size: contain
+          position: center
+          repeat: no-repeat
+      &:hover
+        background-color: darken($light-blue-2, 5)
+      &:active
+        transition: none
+        background-color: darken($light-blue-2, 7)
+      &--remove
+        &:before
+          top: 9px
+          left: 6px
+          width: 8px
+          height: 2px
+          background-image: url('data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%222%22%20viewBox%3D%220%200%208%202%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20x1%3D%228.74228e-08%22%20y1%3D%221%22%20x2%3D%228%22%20y2%3D%221%22%20stroke%3D%22%23005C9E%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+      &--add
+        &:before
+          top: 6px
+          left: 6px
+          width: 8px
+          height: 8px
+          background-image: url('data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%228%22%20viewBox%3D%220%200%208%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cline%20x1%3D%228.74228e-08%22%20y1%3D%224%22%20x2%3D%228%22%20y2%3D%224%22%20stroke%3D%22%23005C9E%22%20stroke-width%3D%222%22%2F%3E%0A%3Cline%20x1%3D%224%22%20y1%3D%224.37114e-08%22%20x2%3D%224%22%20y2%3D%228%22%20stroke%3D%22%23005C9E%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E%0A')
+    &-value
+      min-width: 30px
+      padding: 0 5px
+      text-align: center
+      line-height: 18px
+      font-size: 12px
+  &__cart
+    margin-bottom: 35px
+    width: 230px
+  &__subheading
+    margin-bottom: 20px
+    line-height: 20px
+  &__table
+    position: relative
+    padding-bottom: 15px
+    @include table
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: -35px
+      display: block
+      width: 360px
+      height: 1px
+      background-color: $light-blue-2
+    &-row
+      @include table-row
+      &--bottom
+        @include table-row-bottom
+    &-cell
+      @include table-cell
+  &__docs
+    margin-bottom: 30px
+  &__doc
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 10px
+    text-decoration: none
+    color: $black
+    &-heading
+      opacity: 0.4
+      overflow: hidden
+      width: 140px
+      padding-right: 5px
+      white-space: nowrap
+      text-overflow: ellipsis
+      line-height: 18px
+      font-size: 12px
+    &-label
+      margin-right: 5px
+      padding: 0 5px
+      background-color: $light-blue-2
+      color: $blue
+      letter-spacing: 0.1em
+      line-height: 18px
+      font-size: 9px
+    &-size
+      opacity: 0.8
+      text-decoration: underline
+      line-height: 18px
+      font-size: 12px
+  &__tags
+    @include tag-container
+  &__tag
+    @include tag-item
+    @include tag-item-selected

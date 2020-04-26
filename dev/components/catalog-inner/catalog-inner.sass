@@ -12,11 +12,10 @@
     width: 270px
     padding-top: 65px
   &__grid
-    display: flex
-    flex-flow: row wrap
-    justify-content: flex-start
-    align-items: flex-start
-    width: calc(100% + 30px)
-    margin-left: -15px
+    @include cards-grid
     .item-card
       margin: 0 15px 30px
+  &__list
+    margin-bottom: 30px
+    .item-unit
+      margin-bottom: 10px

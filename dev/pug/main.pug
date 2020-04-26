@@ -7,6 +7,7 @@ include ../components/advantages/advantages
 include ../components/scheme/scheme
 include ../components/feedback-calc/feedback-calc
 include ../components/footer/footer
+include ../components/_ui/popup/popup
 
 doctype
 html(lang="ru", prefix="og: http://ogp.me/ns#")
@@ -45,3 +46,7 @@ html(lang="ru", prefix="og: http://ogp.me/ns#")
             p.description__subheading Производители
             p.description__text Также нужно помнить, что большинство участков продаются без коммуникаций и у вас есть возможность решить эту проблему по-своему – дешево и надежно.
       +footer
+    +popup('item', 'item-1')
+    +popup('item', 'item-2')
+    +popup('item', 'item-3')
+    +popup('item', 'item-4')

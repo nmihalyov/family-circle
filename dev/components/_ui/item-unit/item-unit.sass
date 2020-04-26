@@ -1,0 +1,55 @@
+.item-unit
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-items: center
+  width: 870px
+  height: 80px
+  padding: 0 30px
+  background-color: #fff
+  border-radius: 5px
+  &__name
+    width: 170px
+    padding-right: 5px
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    @include item-name
+  &__rating
+    @include item-rating
+  &__star
+    @include item-star
+    &--full
+      @include item-star-full
+    &--empty
+      @include item-star-empty
+  &__feedbacks
+    @include item-feedbacks
+  &__feature
+    line-height: 18px
+    font-size: 12px
+    &--price
+      width: 125px
+    &--capacity
+      width: 100px
+    &--power
+      width: 95px
+    &--users
+      width: 115px
+    &-heading
+      color: $grey
+    &-value
+      padding-right: 5px
+      overflow: hidden
+      white-space: nowrap
+      text-overflow: ellipsis
+  &__oldprice
+    margin-left: 3px
+    color: $grey
+    text-decoration: line-through
+  &__label
+    margin-left: 30px
+    @include item-label
+  &__add
+    margin-left: auto
+    @include item-add
