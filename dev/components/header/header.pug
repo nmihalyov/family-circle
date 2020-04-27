@@ -13,9 +13,9 @@ mixin header
                 a.header__nav-dropdown-item(href="#") Сервисное обслуживание
                 a.header__nav-dropdown-item(href="#") Установка септиков
                 a.header__nav-dropdown-item(href="#") Ремонт септиков
-            a.header__nav-link(href="#") Септики под ключ
+            a.header__nav-link(href="catalog-inner.html") Септики под ключ
             a.header__nav-link(href="#") Акции
-            a.header__nav-link(href="#") Производители
+            a.header__nav-link(href="manufacturers.html") Производители
             a.header__nav-link(href="#") Доставка и оплата
             a.header__nav-link(href="#") О компании
             a.header__nav-link(href="#") Контакты
@@ -23,7 +23,8 @@ mixin header
     .container
       .wrapper
         .header__bottom
-          img.header__logo(src="img/logo.svg", alt="Семейный круг")
+          a(href="main.html")
+            img.header__logo(src="img/logo.svg", alt="Семейный круг")
           p.header__desc Установка и обслуживание систем канализации
           .header__catalog.js-dropdown-container(data-dropdown="header-catalog")
             +button-primary('link', 'Каталог', 'header__btn js-dropdown-button', {link: '#'})

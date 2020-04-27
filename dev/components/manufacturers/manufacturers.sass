@@ -1,28 +1,27 @@
 .manufacturers
-  z-index: 2
-  position: relative
-  background-color: #fff
-  &__wrapper
+  &__grid
+    @include cards-grid
+    margin-bottom: 40px
+  &__item
     display: flex
     flex-flow: row nowrap
-    justify-content: space-between
+    justify-content: center
     align-items: center
-    padding-top: 30px !important
-    padding-bottom: 30px !important
-  &__item
-    filter: grayscale(1)
-    opacity: 0.6
-    &:nth-child(2)
-      margin-top: -9px
-    &:nth-child(3)
-      margin-top: -2px
-    &:nth-child(4)
-      margin-top: -15px
-    &:nth-child(5)
-      margin-top: -3px
-    &:nth-child(6)
-      margin: -3px -30px 0
-    &:nth-child(7)
-      margin-top: -15px
-    &:nth-child(8)
-      margin-top: -5px
+    width: 170px
+    height: 120px
+    margin: 0 15px 30px
+    padding: 15px
+    border-radius: 5px
+    background-color: #fff
+    &:hover
+      .manufacturers__item-img
+        filter: grayscale(0)
+        opacity: 1
+    &-img
+      max-width: 100%
+      max-height: 100%
+      width: auto
+      height: auto
+      filter: grayscale(1)
+      opacity: 0.4
+      transition: all .3s ease
