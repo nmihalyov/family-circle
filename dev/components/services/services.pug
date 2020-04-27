@@ -1,0 +1,16 @@
+include ../_ui/breadcrumbs/breadcrumbs
+include ../_ui/heading/heading
+include ../_ui/category-card/category-card
+include ../offer-card/offer-card
+
+mixin services
+  section.services.container
+    .wrapper
+      +breadcrumbs([{title: 'Семейный круг', link: '/'}, {title: 'Услуги', link: 'services.html'}])
+      +heading('Услуги')
+      .services__grid
+        +category-card('img/inhtml/services/1.png', 'Откачка септиков', 'service.html')
+        +category-card('img/inhtml/services/2.png', 'Сервисное обслуживание', 'service.html')
+        +category-card('img/inhtml/services/3.png', 'Установка септиков', 'service.html')
+        +category-card('img/inhtml/services/4.png', 'Ремонт септиков', 'service.html')
+      +offer-card('Септики под ключ', 'img/inhtml/offer-card-image.png', {text: 'Узнать подробнее', link: 'service.html'})

@@ -1,13 +1,12 @@
 include ../components/header/header
 include ../components/calc/calc
-include ../components/catalog-main/catalog-main
-include ../components/producers/producers
+include ../components/services/services
 include ../components/footer/footer
 
 doctype
 html(lang="ru", prefix="og: http://ogp.me/ns#")
   head
-    title Семейный круг | Каталог
+    title Семейный круг | Услуги
     include assets/_metas
     include assets/_links
     include assets/_scripts
@@ -15,8 +14,7 @@ html(lang="ru", prefix="og: http://ogp.me/ns#")
     .page-wrapper
       +header
       +calc
-      +catalog-main
-      +producers
+      +services
       section.description.container
         .description__wrapper.wrapper
           .description__col

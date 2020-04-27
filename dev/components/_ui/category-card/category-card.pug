@@ -1,4 +1,4 @@
-mixin category-card(image, title, url)
-  a.category-card(href=url)
+mixin category-card(image, title, url, big)
+  a.category-card(class=`${big ? 'category-card--big' : ''}`, href=url)
     img.category-card__img(src=image, alt=title)
     .category-card__name= title

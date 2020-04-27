@@ -1,0 +1,7 @@
+include ../_ui/button/button
+
+mixin offer-card(heading, image, btn)
+  .offer-card
+    p.offer-card__heading= heading
+    img.offer-card__image(src=image, alt="")
+    +button-minor('link', btn.text, 'offer-card__btn', {link: btn.link})
