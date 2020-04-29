@@ -4,9 +4,9 @@ include ../_ui/heading/heading
 mixin manufacturers
   section.manufacturers.container
     .wrapper
-      +breadcrumbs([{title: 'Семейный круг', link: '/'}, {title: 'Производители', link: 'manufacturers.html'}])
+      +breadcrumbs([{title: 'Семейный круг', link: 'main.html'}, {title: 'Производители', link: 'manufacturers.html'}])
       +heading('Производители')
       .manufacturers__grid
         - for (let i = 1; i <= 20; i++)
-          a.manufacturers__item(href="catalog.html")
+          a.manufacturers__item(href="catalog-inner.html")
             img.manufacturers__item-img(src=`img/inhtml/manufacturers/${i}.png`, alt="")

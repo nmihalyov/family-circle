@@ -1,0 +1,14 @@
+include ../_ui/button/button
+
+mixin sale-item(bgColor, bgImage, textColor, duration, desc, btn)
+  .sale-item
+    .sale-item__pic(style=`background-color: ${bgColor};`)
+      p.sale-item__pic-text(style=`color: ${textColor};`) Акция
+      .sale-item__pic-image(style=`background-image: url('${bgImage}');`)
+    .sale-item__info
+      .sale-item__duration
+        p.sale-item__duration-heading Условия:
+        .sale-item__duration-icon
+        p.sale-item__duration-text= duration
+      .sale-item__desc!= desc
+      +button-secondary('link', btn.text, 'sale-item__btn', {link: '#'})

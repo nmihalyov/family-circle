@@ -1,0 +1,24 @@
+include ../components/header/header
+include ../components/calc/calc
+include ../components/_ui/breadcrumbs/breadcrumbs
+include ../components/_ui/heading/heading
+include ../components/sale-item/sale-item
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Семейный круг | Акция №2
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +calc
+      section.container
+        .wrapper
+          +breadcrumbs([{title: 'Семейный круг', link: 'main.html'}, {title: 'Акции', link: 'sales.html'}, {title: 'Откачка со скидкой 50% до 31 марта', link: 'sales-2.html'}])
+          +heading('Откачка со скидкой 50% до 31 марта')
+          +sale-item('#E5EEF4', 'img/inhtml/sales/2.png', '#F6F9FB', 'Акция действует до 31 марта 2020 года.', 'При заказе любого оборудования с нашего сайта на сумму 30&nbsp;000 ₽, скидка на откачку 50%.', {text: 'Отправить заявку'})
+      +footer
