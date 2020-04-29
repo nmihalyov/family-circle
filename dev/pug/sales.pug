@@ -1,0 +1,42 @@
+include ../components/header/header
+include ../components/calc/calc
+include ../components/_ui/breadcrumbs/breadcrumbs
+include ../components/_ui/heading/heading
+include ../components/_ui/item-card/item-card
+include ../components/_ui/sale-card/sale-card
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Семейный круг | Акции
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +calc
+      section.container
+        .wrapper
+          +breadcrumbs([{title: 'Семейный круг', link: '/'}, {title: 'Акции', link: 'sales.html'}])
+      section.suggestion.suggestion--indent.container
+        .wrapper
+          +heading('Акции', '', {icon: 'sales', text: 'Септики со скидкой'})
+          .suggestion__grid
+            +item-card('img/inhtml/items/1.png', 'hit', 'Септик', '1 000 л', 'Росток Мини', 4, 14, '26 800', 'item-1')
+            +item-card('img/inhtml/items/2.png', 'hit', 'Септик', '1 000 л', 'Коло Веси 5', 4, 14, '157 900', 'item-2')
+            +item-card('img/inhtml/items/3.png', 'hit', 'Септик', '1 000 л', 'Юнилос Астра 3', 4, 14, '65 450', 'item-3')
+            +item-card('img/inhtml/items/4.png', 'hit', 'Септик', '1 000 л', 'Топас-С 4', 4, 14, '75 960', 'item-4')
+      section.suggestion.container
+        .wrapper
+          .suggestion__grid
+            +sale-card('Септик за 1 день.<br>Под ключ с бесплатной доставкой.', {link: 'sale-1.html', text: 'Смотреть условия'}, 'white', 'img/inhtml/sales/1.png', '#005C9E')
+            +sale-card('Откачка<br>со скидкой 50%<br>до 31 марта', {link: 'sale-2.html', text: 'Смотреть условия'}, 'blue', 'img/inhtml/sales/2.png', '#E5EEF4')
+      section.description.container
+        .description__wrapper.wrapper
+          .description__col
+            p.description__text Септик – это автономная канализация, которая состоит из надежных пластиковых труб, не&nbsp;подверженных коррозии и уникальной очистной системы - главного элемента очистной системы Топас.<br><br>Именно он даст вам возможность провести в дом канализацию, которая сможет выдерживать ту&nbsp;же нагрузку, что и канализация в городской квартире, и даже больше. Система абсолютно экологична, с степенью очистки 98%. Очистка происходит биологичным способом, благодаря бактериям, которые питаются грязью.<br><br>В результате остается только полезный, насыщенный минералами ил, подходящий, как&nbsp;удобрения, для приусадебного участка. Теперь вам не надо будет строить около дома выгребную яму, которая будет вам создавать дискомфорт и проблемы по ее очистке.
+          .description__col
+            p.description__text Как видим, у системы автономной канализации для вашего загородного дома есть множество достоинств. Вы сможете сэкономить деньги и время, быть уверенным в надежности и&nbsp;безопасности вашей канализации. Она не будет мешать вам посторонними запахами или&nbsp;звуками, а просто тихо выполнять свою работу.<br><br>Также нужно помнить, что большинство участков продаются без коммуникаций и у вас есть возможность решить эту проблему по-своему – дешево и надежно.
+      +footer

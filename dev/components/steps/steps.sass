@@ -1,0 +1,32 @@
+.steps
+  @include cards-grid
+  &__item
+    width: 270px
+    margin: 0 15px 30px
+  &__card
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    height: 110px
+    padding: 25px
+    background-color: #fff
+    border-radius: 5px
+    line-height: 20px
+  &__count
+    z-index: 2
+    position: relative
+    display: flex
+    flex-flow: row nowrap
+    justify-content: center
+    align-items: center
+    width: 36px
+    height: 36px
+    margin: 0 auto -18px
+    border-radius: 50%
+    background-color: $blue
+    color: #fff
+    line-height: 18px
+    font:
+      size: 12px
+      weight: 500

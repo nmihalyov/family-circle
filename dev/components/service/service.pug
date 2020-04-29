@@ -1,0 +1,54 @@
+include ../_ui/breadcrumbs/breadcrumbs
+include ../_ui/heading/heading
+include ../feedback/feedback
+include ../steps/steps
+
+mixin service
+  section.service.container
+    .wrapper
+      +breadcrumbs([{title: 'Семейный круг', link: '/'}, {title: 'Услуги', link: 'services.html'}, {title: 'Установка септиков', link: 'service.html'}])
+      +heading('Установка септиков')
+      .service__install
+        p.service__install-col Качественная работа по монтажу септиков, включает в себя несколько этапов. Перед установкой очистительных конструкций, а также прокладкой канализационных труб стоит учесть следующие моменты:<br><br>• Глубина залегания подземных вод (УГВ).<br>• Глубина промерзания земли в конкретном регионе.<br>• Тип почвы.
+        p.service__install-col Эти три фактора не только предопределяют подходящие септики, установка и монтаж, а точнее особенности этих работ также от них зависят.<br><br>Так, например, при высоком УГВ стоит выбирать специальные модели, разработанные для использования в таких условиях. Монтаж же рассматриваемых устройств на песчаной почве и на плывуне будет иметь разную цену из-за различного объема работ.
+      +heading('Цены на монтаж септиков')
+      .service__prices
+        .service__prices-table
+          .service__prices-row.service__prices-row--head
+            p.service__prices-station Станция
+            p.service__prices-forced Самотечная/Принудительная
+            p.service__prices-long Лонг
+            p.service__prices-midi Миди
+          .service__prices-row
+            p.service__prices-station Станция 3
+            p.service__prices-forced 19 613 &#8381;
+            p.service__prices-long -
+            p.service__prices-midi -
+          .service__prices-row
+            p.service__prices-station Станция 4
+            p.service__prices-forced 19 999 &#8381;
+            p.service__prices-long -
+            p.service__prices-midi -
+          .service__prices-row
+            p.service__prices-station Станция 5
+            p.service__prices-forced 21 158 &#8381;
+            p.service__prices-long 23 513 &#8381;
+            p.service__prices-midi 21 583 &#8381;
+          .service__prices-row
+            p.service__prices-station Станция 6
+            p.service__prices-forced 22 239 &#8381;
+            p.service__prices-long 23 281 &#8381;
+            p.service__prices-midi 22 741 &#8381;
+          .service__prices-row
+            p.service__prices-station Станция 7
+            p.service__prices-forced 23 397 &#8381;
+            p.service__prices-long 23 745 &#8381;
+            p.service__prices-midi 22 741 &#8381;
+          .service__prices-row
+            p.service__prices-station Станция 8
+            p.service__prices-forced 23 513 &#8381;
+            p.service__prices-long 25 057 &#8381;
+            p.service__prices-midi 24 054 &#8381;
+        +feedback('Не можете определиться?')
+      +heading('Порядок установки септика')
+      +steps(['Подготовка котлована', 'Установка станции', 'Выравнивание станции', 'Монтаж трубопровода', 'Заполнение водой', 'Пуско-наладочные работы', 'Проверка функционала', 'Финальная засыпка'], 'service__steps')

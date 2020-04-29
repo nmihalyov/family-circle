@@ -1,0 +1,7 @@
+mixin steps(stepsArr, className)
+  .steps(class=`${className || ''}`)
+    each step, i in stepsArr
+      .steps__item
+        .steps__count= i+1
+        .steps__card
+          p.steps__card-text= step

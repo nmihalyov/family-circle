@@ -1,0 +1,57 @@
+.service
+  &__install
+    display: flex
+    flex-flow: row nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    margin-bottom: 60px
+    padding: 30px
+    background-color: #fff
+    border-radius: 5px
+    color: $grey
+    line-height: 20px
+    &-col
+      &:first-child
+        width: 540px
+        padding-right: 50px
+        border-right: 1px solid $light-blue-2
+      &:last-child
+        width: 500px
+        margin-left: 60px
+  &__prices
+    @include feedback-container
+    height: 530px
+    margin-bottom: 60px
+    &-table
+      width: 100%
+    &-row
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: flex-start
+      padding: 28px 30px 27px
+      color: $grey
+      line-height: 20px
+      &:not(:last-child)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+      &--head
+        color: $black
+        font-weight: 500
+    &-station,
+    &-forced,
+    &-long,
+    &-midi
+      padding-right: 10px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+    &-station
+      width: 175px
+    &-forced
+      width: 300px
+    &-long
+      width: 150px
+    &-midi
+      width: 90px
+  &__steps
+    margin-bottom: 30px

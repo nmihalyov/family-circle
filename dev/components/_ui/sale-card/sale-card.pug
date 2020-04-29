@@ -1,0 +1,9 @@
+include ../button/button
+
+mixin sale-card(heading, btn, textColor, bgImage, bgColor)
+  .sale-card(style=`background-image: url('${bgImage}'); background-color: ${bgColor};`)
+    p.sale-card__heading(class=`sale-card__heading--${textColor}`)!= heading
+    if textColor === 'white'
+      +button-minor('link', btn.text, 'sale-card__btn', {link: btn.link})
+    else if textColor === 'blue'
+      +button-secondary('link', btn.text, 'sale-card__btn', {link: btn.link})
