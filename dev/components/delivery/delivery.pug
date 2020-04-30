@@ -1,0 +1,27 @@
+include ../_ui/breadcrumbs/breadcrumbs
+include ../_ui/heading/heading
+include ../_ui/tabs/tabs
+include ../feedback/feedback
+
+mixin delivery
+  section.delivery.container
+    .wrapper
+      +breadcrumbs([{title: 'Семейный круг', link: 'main.html'}, {title: 'Доставка и оплата', link: 'delivery.html'}])
+      +heading('Доставка и оплата')
+      .delivery__block
+        .delivery__content
+          +tabs([{name: 'Доставка', tab: 'delivery'}, {name: 'Оплата', tab: 'payment'}])
+          .delivery__content__units
+            .delivery__content-unit.js-tab-content(data-tab="delivery")
+              p.delivery__content-heading Доставка
+              p.delivery__content-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel facilis ipsam quisquam, saepe ab nihil. Et tempora deleniti odit eveniet.
+              p.delivery__content-text Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad, quis quibusdam. Saepe, qui repudiandae praesentium voluptas voluptate deleniti. Nostrum porro aperiam quia, similique, suscipit quis quod rerum illo, itaque voluptate molestiae placeat est vero quibusdam!
+            .delivery__content-unit.js-tab-content(data-tab="payment")
+              p.delivery__content-heading Оплата безналичным расчетом
+              p.delivery__content-text Вы можете оплатить свой заказ по безналичному расчету. Менеджер, сразу после оформления заказа, выставить вам счет на оплату. Счет действителен в течение 5&nbsp;банковских дней.
+              p.delivery__content-heading Оплата наличными
+              p.delivery__content-text Вы можете оплатить ваш заказ наличными или банковской картой в нашем офисе продаж по адресу Краснодар, ул. 40 лет Победы 9, офис 356 или в одном из наших магазинов:
+              ul.delivery__content-list
+                li.delivery__content-list-item Краснодар, наб. Академика Туполева, д.3
+                li.delivery__content-list-item Краснодар, Дмитровское шоссе, дом 108б, стр.1
+        +feedback('Возникли вопросы?')

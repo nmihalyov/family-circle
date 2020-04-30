@@ -1,0 +1,18 @@
+include ../components/header/header
+include ../components/calc/calc
+include ../components/delivery/delivery
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Семейный круг | Доставка и оплата
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +calc
+      +delivery
+      +footer

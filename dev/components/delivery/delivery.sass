@@ -1,0 +1,24 @@
+.delivery
+  &__block
+    @include feedback-container
+    height: 490px
+    margin-bottom: 70px
+  &__content
+    padding: 50px 60px 50px 50px
+    &-unit
+      padding-top: 40px
+      &:not(:first-child)
+        display: none
+    &-heading
+      margin-bottom: 25px
+      line-height: 18px
+      font-weight: 500
+    &-text,
+    &-list
+      margin: 0
+      color: $grey
+      line-height: 20px
+      &:not(:last-child)
+        margin-bottom: 30px
+    &-list
+      padding-left: 20px
