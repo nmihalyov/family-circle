@@ -5,6 +5,7 @@ include ../components/_ui/heading/heading
 include ../components/_ui/item-card/item-card
 include ../components/_ui/sale-card/sale-card
 include ../components/footer/footer
+include ../components/_ui/popup/popup
 
 doctype
 html(lang="ru", prefix="og: http://ogp.me/ns#")
@@ -40,3 +41,7 @@ html(lang="ru", prefix="og: http://ogp.me/ns#")
           .description__col
             p.description__text Как видим, у системы автономной канализации для вашего загородного дома есть множество достоинств. Вы сможете сэкономить деньги и время, быть уверенным в надежности и&nbsp;безопасности вашей канализации. Она не будет мешать вам посторонними запахами или&nbsp;звуками, а просто тихо выполнять свою работу.<br><br>Также нужно помнить, что большинство участков продаются без коммуникаций и у вас есть возможность решить эту проблему по-своему – дешево и надежно.
       +footer
+    +popup('item', 'item-1')
+    +popup('item', 'item-2')
+    +popup('item', 'item-3')
+    +popup('item', 'item-4')

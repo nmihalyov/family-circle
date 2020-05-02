@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" prefix="og: http://ogp.me/ns#">
   <head>
-    <title>Семейный круг | Услуги</title>
+    <title>Семейный круг | Корзина</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="Page description">
@@ -71,30 +71,78 @@
         </div>
       </header><a class="calc" href="#">
         <div class="calc__icon"></div><span class="calc__text">Калькулятор расчета стоимости</span></a>
-      <section class="services container">
+      <section class="cart container">
         <div class="wrapper">
-          <div class="breadcrumbs"><a class="breadcrumbs__item" href="main.html">Семейный круг</a><a class="breadcrumbs__item" href="services.html">Услуги</a>
+          <div class="breadcrumbs"><a class="breadcrumbs__item" href="main.html">Семейный круг</a><a class="breadcrumbs__item" href="cart.html">Корзина</a>
           </div>
-          <h2 class="heading">Услуги
+          <h2 class="heading">Выбранный товар
           </h2>
-          <div class="services__grid"><a class="category-card" href="service.html"><img class="category-card__img" src="img/inhtml/services/1.png" alt="Откачка септиков"/>
-              <div class="category-card__name">Откачка септиков</div></a><a class="category-card" href="service.html"><img class="category-card__img" src="img/inhtml/services/2.png" alt="Сервисное обслуживание"/>
-              <div class="category-card__name">Сервисное обслуживание</div></a><a class="category-card" href="service.html"><img class="category-card__img" src="img/inhtml/services/3.png" alt="Установка септиков"/>
-              <div class="category-card__name">Установка септиков</div></a><a class="category-card" href="service.html"><img class="category-card__img" src="img/inhtml/services/4.png" alt="Ремонт септиков"/>
-              <div class="category-card__name">Ремонт септиков</div></a>
+          <div class="cart__table">
+            <div class="cart__item js-cart-item">
+              <div class="cart__item-image" style="background-image: url('img/inhtml/cart/1.jpg');"></div>
+              <div class="cart__item-desc">
+                <p class="cart__item-point">Септик</p>
+                <p class="cart__item-name">Росток Мини</p>
+              </div>
+              <div class="cart__item-amount">
+                <p class="cart__item-point">Количество</p>
+                <div class="amount cart__item-amount-counter">
+                  <button class="amount-btn amount-btn--remove js-amount-remove"></button>
+                  <input class="amount-value js-amount-value js-cart-amount" type="text" name="item1" disabled="disabled" value="1"/>
+                  <button class="amount-btn amount-btn--add js-amount-add"></button>
+                </div>
+              </div>
+              <div class="cart__item-install">
+                <p class="cart__item-point cart__item-point--indent">Без установки</p>
+                <label class="radio js-radio  radio--checked">
+                  <input class="radio__input js-cart-radio" type="radio" name="item1" value="26800" checked="checked"/><span class="radio__btn"></span>
+                  <p class="radio__placeholder">26 800 &#8381;</p>
+                </label>
+              </div>
+              <div class="cart__item-install">
+                <p class="cart__item-point cart__item-point--indent">С установкой</p>
+                <label class="radio js-radio  ">
+                  <input class="radio__input js-cart-radio" type="radio" name="item1" value="76350"/><span class="radio__btn"></span>
+                  <p class="radio__placeholder">76 350 &#8381;</p>
+                </label>
+              </div>
+              <button class="cart__item-del js-cart-del"></button>
+            </div>
+            <div class="cart__item js-cart-item">
+              <div class="cart__item-image" style="background-image: url('img/inhtml/cart/1.jpg');"></div>
+              <div class="cart__item-desc">
+                <p class="cart__item-point">Септик</p>
+                <p class="cart__item-name">Юнилос Астра 3</p>
+              </div>
+              <div class="cart__item-amount">
+                <p class="cart__item-point">Количество</p>
+                <div class="amount cart__item-amount-counter">
+                  <button class="amount-btn amount-btn--remove js-amount-remove"></button>
+                  <input class="amount-value js-amount-value js-cart-amount" type="text" name="item2" disabled="disabled" value="1"/>
+                  <button class="amount-btn amount-btn--add js-amount-add"></button>
+                </div>
+              </div>
+              <div class="cart__item-install">
+                <p class="cart__item-point cart__item-point--indent">Без установки</p>
+                <label class="radio js-radio  radio--checked">
+                  <input class="radio__input js-cart-radio" type="radio" name="item2" value="65450" checked="checked"/><span class="radio__btn"></span>
+                  <p class="radio__placeholder">65 450 &#8381;</p>
+                </label>
+              </div>
+              <div class="cart__item-install">
+                <p class="cart__item-point cart__item-point--indent">С установкой</p>
+                <label class="radio js-radio  ">
+                  <input class="radio__input js-cart-radio" type="radio" name="item2" value="89900"/><span class="radio__btn"></span>
+                  <p class="radio__placeholder">89 900 &#8381;</p>
+                </label>
+              </div>
+              <button class="cart__item-del js-cart-del"></button>
+            </div>
           </div>
-          <div class="offer-card">
-            <p class="offer-card__heading">Септики под ключ</p><img class="offer-card__image" src="img/inhtml/offer-card-image.png" alt=""/><a class="button button--minor offer-card__btn" href="service.html">Узнать подробнее</a>
-          </div>
-        </div>
-      </section>
-      <section class="description container">
-        <div class="description__wrapper wrapper">
-          <div class="description__col">
-            <p class="description__text">Септик – это автономная канализация, которая состоит из надежных пластиковых труб, не&nbsp;подверженных коррозии и уникальной очистной системы - главного элемента очистной системы Топас.<br><br>Именно он даст вам возможность провести в дом канализацию, которая сможет выдерживать ту&nbsp;же нагрузку, что и канализация в городской квартире, и даже больше. Система абсолютно экологична, с степенью очистки 98%. Очистка происходит биологичным способом, благодаря бактериям, которые питаются грязью.<br><br>В результате остается только полезный, насыщенный минералами ил, подходящий, как&nbsp;удобрения, для приусадебного участка. Теперь вам не надо будет строить около дома выгребную яму, которая будет вам создавать дискомфорт и проблемы по ее очистке.</p>
-          </div>
-          <div class="description__col">
-            <p class="description__text">Как видим, у системы автономной канализации для вашего загородного дома есть множество достоинств. Вы сможете сэкономить деньги и время, быть уверенным в надежности и&nbsp;безопасности вашей канализации. Она не будет мешать вам посторонними запахами или&nbsp;звуками, а просто тихо выполнять свою работу.<br><br>Также нужно помнить, что большинство участков продаются без коммуникаций и у вас есть возможность решить эту проблему по-своему – дешево и надежно.</p>
+          <div class="cart__total">
+            <p class="cart__total-heading">Итого к оплате:</p>
+            <p class="cart__total-value"><span class="js-cart-total">92 250</span>&nbsp;&#8381;</p>
+            <button class="button button--primary js-open-popup cart__total-btn" data-popup="query">Отправить заявку</button>
           </div>
         </div>
       </section>
@@ -150,6 +198,40 @@
           </div>
         </div>
       </footer>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="query">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window popup__query">
+            <div class="popup__header popup__header--centered">
+              <div class="popup__header-close js-close-popup"></div>
+              <p class="popup__header-heading">Заполните данные</p>
+              <p class="popup__header-desc">И наш менеджер свяжется с вами для завершения оформления заявки</p>
+            </div>
+            <form class="popup__query-form" action="">
+              <p class="popup__query-resume">У вас&nbsp;<span class="js-query-amount" data-set="[&quot;товар&quot;, &quot;товара&quot;, &quot;товаров&quot;]"></span>&nbsp;на сумму&nbsp;<span class="js-query-sum"></span>&nbsp;&#8381;</p>
+              <input class="input popup__query-input" type="text" name="name" required="required" placeholder="Введите ваше имя"/>
+              <input class="input popup__query-input" type="tel" name="phone" required="required" placeholder="Введите телефон"/>
+              <button class="button button--primary popup__query-btn js-query-send" type="submit">Отправить заявку</button>
+              <p class="popup__query-disclaimer">Нажимая на кнопку «Отправить заявку», я даю согласие на обработку Персональных данных и&nbsp;соглашаюсь c Политикой конфиденциальности</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup js-popup js-close-popup" data-popup="success">
+      <div class="popup__backdrop"></div>
+      <div class="popup__container">
+        <div class="popup__wrapper">
+          <div class="popup__window popup__success">
+            <div class="popup__success-close js-close-popup"></div>
+            <div class="popup__success-icon"></div>
+            <p class="popup__success-heading">Спасибо за заказ!</p>
+            <p class="popup__success-text">Наш менеджер свяжется с вами через пару минут.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

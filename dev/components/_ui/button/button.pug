@@ -5,6 +5,8 @@ mixin button-primary(type, text, className, options)
     button.button.button--primary(class=`${className || ''}`)= text
   else if type === 'submit'
     button.button.button--primary(class=`${className || ''}`, type="submit")= text
+  else if type === 'popup'
+    button.button.button--primary.js-open-popup(class=`${className || ''}`, data-popup=options.popup)= text
 
 mixin button-secondary(type, text, className, options)
   if type === 'link'

@@ -8,23 +8,6 @@ $('.js-item-slider').slick({
   customPaging: () => ''
 });
 
-// items counter
-const updateItemCounter = val => $('.js-count-value').text(+$('.js-count-value').text() + val);
-
-$('.js-count-remove').on('click', function(e) {
-  e.preventDefault();
-
-  if (+$('.js-count-value').text() !== 1) {
-    updateItemCounter(-1);
-  }
-});
-
-$('.js-count-add').on('click', function(e) {
-  e.preventDefault();
-
-  updateItemCounter(1);
-});
-
 // toggle options
 $('.js-item-option').on('click', function () {
   const $this = $(this);

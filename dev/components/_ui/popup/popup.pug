@@ -1,7 +1,7 @@
 include ../textarea/textarea
 include ../input/input
 
-mixin popup(type, id)
+mixin popup(type, id = type)
   .popup.js-popup.js-close-popup(data-popup=id)
     .popup__backdrop
     .popup__container
@@ -65,3 +65,25 @@ mixin popup(type, id)
               +input('text', 'name', 'Введите ваше имя', 'popup__feedback-input', true)
               +textarea('feedback', 'Ваш комментарий', 'popup__feedback-textarea', true)
               +button-primary('submit', 'Опубликовать комментарий', 'js-feedback-send')
+        else if type === 'query'
+          .popup__window.popup__query
+            .popup__header.popup__header--centered
+              .popup__header-close.js-close-popup
+              p.popup__header-heading Заполните данные
+              p.popup__header-desc И наш менеджер свяжется с вами для завершения оформления заявки
+            form.popup__query-form(action="")
+              p.popup__query-resume У вас&nbsp;
+                span.js-query-amount(data-set='["товар", "товара", "товаров"]')
+                |&nbsp;на сумму&nbsp;
+                span.js-query-sum
+                |&nbsp;&#8381;
+              +input('text', 'name', 'Введите ваше имя', 'popup__query-input', true)
+              +input('tel', 'phone', 'Введите телефон', 'popup__query-input', true)
+              +button-primary('submit', 'Отправить заявку', 'popup__query-btn js-query-send')
+              p.popup__query-disclaimer Нажимая на кнопку «Отправить заявку», я даю согласие на обработку Персональных данных и&nbsp;соглашаюсь c Политикой конфиденциальности
+        else if type === 'success'
+          .popup__window.popup__success
+            .popup__success-close.js-close-popup
+            .popup__success-icon
+            p.popup__success-heading Спасибо за заказ!
+            p.popup__success-text Наш менеджер свяжется с вами через пару минут.

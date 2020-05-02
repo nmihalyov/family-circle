@@ -40,7 +40,7 @@
               <nav class="header__nav">
                 <div class="header__nav-dropdown js-dropdown-container" data-dropdown="header-services"><a class="header__nav-link js-dropdown-button" href="#">Услуги</a>
                   <div class="header__nav-dropdown-menu js-dropdown-menu"><a class="header__nav-dropdown-item" href="service.html">Откачка септиков</a><a class="header__nav-dropdown-item" href="service.html">Сервисное обслуживание</a><a class="header__nav-dropdown-item" href="service.html">Установка септиков</a><a class="header__nav-dropdown-item" href="service.html">Ремонт септиков</a></div>
-                </div><a class="header__nav-link" href="catalog-inner.html">Септики под ключ</a><a class="header__nav-link" href="sales.html">Акции</a><a class="header__nav-link" href="manufacturers.html">Производители</a><a class="header__nav-link" href="#">Доставка и оплата</a><a class="header__nav-link" href="#">О компании</a><a class="header__nav-link" href="#">Контакты</a>
+                </div><a class="header__nav-link" href="catalog-inner.html">Септики под ключ</a><a class="header__nav-link" href="sales.html">Акции</a><a class="header__nav-link" href="manufacturers.html">Производители</a><a class="header__nav-link" href="delivery.html">Доставка и оплата</a><a class="header__nav-link" href="#">О компании</a><a class="header__nav-link" href="#">Контакты</a>
               </nav>
               <p class="header__location">Краснодарский край</p>
             </div>
@@ -191,8 +191,11 @@
               </div>
               <div class="item__count">
                 <p class="item__count-heading">Укажите количество:</p>
-                <button class="item__count-btn item__count-btn--remove js-count-remove"></button><span class="item__count-value js-count-value">1</span>
-                <button class="item__count-btn item__count-btn--add js-count-add"></button>
+                <div class="amount">
+                  <button class="amount-btn amount-btn--remove js-amount-remove"></button>
+                  <input class="amount-value js-amount-value" type="text" name="item1" disabled="disabled" value="1"/>
+                  <button class="amount-btn amount-btn--add js-amount-add"></button>
+                </div>
               </div>
               <button class="button button--primary item__cart js-cart-add">Добавить в корзину</button>
               <button class="button button--cart js-cart-remove item__cart" data-added="false">Добавлено в корзину</button>
@@ -459,7 +462,7 @@
         <div class="footer-middle container">
           <div class="wrapper">
             <div class="footer__middle"><img class="footer__logo" src="img/logo.svg" alt="Семейный круг"/>
-              <nav class="footer__nav"><a class="footer__nav-link" href="#">Септики под ключ</a><a class="footer__nav-link" href="sales.html">Акции</a><a class="footer__nav-link" href="#">Доставка и оплата</a><a class="footer__nav-link" href="#">О компании</a><a class="footer__nav-link" href="#">Контакты</a></nav>
+              <nav class="footer__nav"><a class="footer__nav-link" href="#">Септики под ключ</a><a class="footer__nav-link" href="sales.html">Акции</a><a class="footer__nav-link" href="delivery.html">Доставка и оплата</a><a class="footer__nav-link" href="#">О компании</a><a class="footer__nav-link" href="#">Контакты</a></nav>
               <p class="footer__tel">+7 499 456-78-89</p>
             </div>
           </div>

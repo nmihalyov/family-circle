@@ -1,0 +1,5 @@
+mixin radio(name, placeholder, value, className, checked, required, inputClassName)
+  label.radio.js-radio(class=`${className || ''} ${checked ? 'radio--checked' : ''}`)
+    input.radio__input(class=`${inputClassName || ''}`, type='radio', name=name, required=required, value=value, checked=checked)
+    span.radio__btn
+    p.radio__placeholder!= placeholder

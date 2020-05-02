@@ -1,0 +1,50 @@
+.radio
+  display: flex
+  flex-flow: row nowrap
+  justify-content: flex-start
+  align-items: center
+  cursor: pointer
+  &--checked
+    pointer-events: none
+    color: $blue
+    .radio__btn
+      &:before
+        opacity: 1
+  &:hover
+    .radio__btn
+      background-color: darken($light-blue-2, 5)
+  &:active
+    .radio__btn
+        transition: none
+        background-color: darken($light-blue-2, 7)
+  &__input
+    opacity: 0
+    visibility: hidden
+    width: 0
+    height: 0
+    margin: 0
+  &__btn
+    position: relative
+    width: 20px
+    height: 20px
+    margin-right: 10px
+    border-radius: 50%
+    background-color: $light-blue-2
+    transition: background-color .3s ease
+    outline: 0
+    &:before
+      opacity: 0
+      content: ''
+      position: absolute
+      top: calc(50% - 3px)
+      left: calc(50% - 3px)
+      display: block
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: $blue
+      transition: opacity .3s ease
+  &__placeholder
+    transition: color .3s ease
+    line-height: 24px
+    font-weight: 500

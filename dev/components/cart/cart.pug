@@ -1,0 +1,49 @@
+include ../_ui/breadcrumbs/breadcrumbs
+include ../_ui/heading/heading
+include ../_ui/button/button
+include ../_ui/amount/amount
+include ../_ui/radio/radio
+include ../feedback/feedback
+
+mixin cart
+  section.cart.container
+    .wrapper
+      +breadcrumbs([{title: 'Семейный круг', link: 'main.html'}, {title: 'Корзина', link: 'cart.html'}])
+      +heading('Выбранный товар')
+      .cart__table
+        .cart__item.js-cart-item
+          .cart__item-image(style="background-image: url('img/inhtml/cart/1.jpg');")
+          .cart__item-desc
+            p.cart__item-point Септик
+            p.cart__item-name Росток Мини
+          .cart__item-amount
+            p.cart__item-point Количество
+            +amount('item1', 'cart__item-amount-counter', 'js-cart-amount')
+          .cart__item-install
+            p.cart__item-point.cart__item-point--indent Без установки
+            +radio('item1', '26 800 &#8381;', '26800', '', true, false, 'js-cart-radio')
+          .cart__item-install
+            p.cart__item-point.cart__item-point--indent С установкой
+            +radio('item1', '76 350 &#8381;', '76350', '', false, false, 'js-cart-radio')
+          button.cart__item-del.js-cart-del
+        .cart__item.js-cart-item
+          .cart__item-image(style="background-image: url('img/inhtml/cart/1.jpg');")
+          .cart__item-desc
+            p.cart__item-point Септик
+            p.cart__item-name Юнилос Астра 3
+          .cart__item-amount
+            p.cart__item-point Количество
+            +amount('item2', 'cart__item-amount-counter', 'js-cart-amount')
+          .cart__item-install
+            p.cart__item-point.cart__item-point--indent Без установки
+            +radio('item2', '65 450 &#8381;', '65450', '', true, false, 'js-cart-radio')
+          .cart__item-install
+            p.cart__item-point.cart__item-point--indent С установкой
+            +radio('item2', '89 900 &#8381;', '89900', '', false, false, 'js-cart-radio')
+          button.cart__item-del.js-cart-del
+      .cart__total
+        p.cart__total-heading Итого к оплате:
+        p.cart__total-value
+          span.js-cart-total 92 250
+          |&nbsp;&#8381;
+        +button-primary('popup', 'Отправить заявку', 'cart__total-btn', {popup: 'query'})

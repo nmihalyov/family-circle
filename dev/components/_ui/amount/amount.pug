@@ -1,0 +1,5 @@
+mixin amount(name, className, inputClassName)
+  .amount(class=`${className || ''}`)
+    button.amount-btn.amount-btn--remove.js-amount-remove
+    input.amount-value.js-amount-value(class=`${inputClassName || ''}`, type="text", name=name, disabled, value="1")
+    button.amount-btn.amount-btn--add.js-amount-add

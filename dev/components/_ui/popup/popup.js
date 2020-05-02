@@ -1,4 +1,12 @@
-// popup handling  
+// popup handling
+const sliderOptions = {
+  swipe: false,
+  prevArrow: '<button class="popup__item-slider-arrow popup__item-slider-arrow--prev"></button>',
+  nextArrow: '<button class="popup__item-slider-arrow popup__item-slider-arrow--next"></button>',
+  dots: true,
+  dotsClass: 'popup__item-slider-dots',
+  customPaging: () => ''
+};
 let topOffset = 0;
 
 const hideOverflow = () => {
@@ -34,11 +42,7 @@ const closePopup = (e, $this) => {
 	}
 };
 
-$('body').on('click', '.js-open-popup', function () {
-  const $this = $(this);
-  const target = $this.attr('data-popup');
-  const $popup = $(`.js-popup[data-popup="${target}"]`);
-
+const openPopup = ($popup) => {
   hideOverflow();
   
   $popup.fadeIn(300);
@@ -47,15 +51,14 @@ $('body').on('click', '.js-open-popup', function () {
   const $slider = $popup.find('.js-popup-slider');
 
   if ($slider.length && !$slider.hasClass('slick-initialized')) {
-    $slider.slick({
-      swipe: false,
-      prevArrow: '<button class="popup__item-slider-arrow popup__item-slider-arrow--prev"></button>',
-      nextArrow: '<button class="popup__item-slider-arrow popup__item-slider-arrow--next"></button>',
-      dots: true,
-      dotsClass: 'popup__item-slider-dots',
-      customPaging: () => ''
-    });
+    $slider.slick(sliderOptions);
   }
+};
+
+$('body').on('click', '.js-open-popup', function () {
+  const target = $(this).attr('data-popup');
+  const $popup = $(`.js-popup[data-popup="${target}"]`);
+  openPopup($popup);
 });
 
 $('.js-close-popup').on('click', function (e) {
@@ -66,9 +69,8 @@ $('.js-close-popup').on('click', function (e) {
 $('.js-feedback-send').on('click', function (e) {  
   const $this = $(this);
   const $formInputs = $this.parent().find('input[required], textarea[required]');
-  let isValid = true;
-  $formInputs.map((i, el) => el.value === '' && (isValid = false));
-  
+  const isValid = emptyInputsValidation($formInputs);
+
   if (isValid) {
     e.preventDefault();
     closePopup(e, $this);

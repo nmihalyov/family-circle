@@ -1,5 +1,6 @@
 include ../_ui/tabs/tabs
 include ../_ui/button/button
+include ../_ui/amount/amount
 
 mixin item
   .item
@@ -98,9 +99,7 @@ mixin item
         p.item__option.js-item-option(data-option="2") с установкой<br>76 350 &#8381;
       .item__count
         p.item__count-heading Укажите количество:
-        button.item__count-btn.item__count-btn--remove.js-count-remove
-        span.item__count-value.js-count-value 1
-        button.item__count-btn.item__count-btn--add.js-count-add
+        +amount('item1')
       +button-primary('button', 'Добавить в корзину', 'item__cart js-cart-add')
       +button-cart('Добавлено в корзину', 'item__cart')
       p.item__subheading Технические характеристики
