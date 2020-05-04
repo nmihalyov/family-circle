@@ -2,7 +2,7 @@ include ../_ui/input/input
 
 mixin feedback(heading)
   form.feedback(action="")
-    p.feedback__heading= heading
+    p.feedback__heading!= heading
     p.feedback__desc Оставьте свой контакт, и наш специалист свяжется с вами через несколько минут.
     +input('text', 'name', 'Введите ваше имя', 'feedback__input', true)
     +input('tel', 'phone', 'Введите телефон', 'feedback__input', true)

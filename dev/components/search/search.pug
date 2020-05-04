@@ -1,0 +1,18 @@
+include ../_ui/breadcrumbs/breadcrumbs
+include ../_ui/heading/heading
+include ../feedback/feedback
+
+mixin search
+  section.search.container
+    .wrapper
+      +breadcrumbs([{title: 'Семейный круг', link: 'main.html'}, {title: 'Результаты поиска', link: 'search-result.html'}])
+      .search__grid
+        .search__content
+          +heading('Найдено 4 результата')
+          .search__results
+            a.search__results-item(href="item.html") Септик Росток большой
+            a.search__results-item(href="item.html") Септик Топас большой
+            a.search__results-item(href="item.html") Септик Термит большой
+            a.search__results-item(href="item.html") Септик Волгарь большой
+        .search__feedback
+          +feedback('Возникли сложности с&nbsp;поиском?')
