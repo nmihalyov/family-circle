@@ -1,5 +1,5 @@
 mixin heading(text, className, subheading)
-  h2.heading(class=`${className || ''}`)= text
+  h2.heading(class=`${className || ''}`)!= text
     if subheading
       span.heading__sub
         .heading__sub-icon(class=`heading__sub-icon--${subheading.icon}`)

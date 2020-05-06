@@ -1,0 +1,58 @@
+include ../_ui/breadcrumbs/breadcrumbs
+include ../_ui/heading/heading
+include ../feedback/feedback
+include ../_ui/contact-card/contact-card
+
+mixin contacts
+  section.contacts.container
+    .wrapper
+      +breadcrumbs([{title: 'Семейный круг', link: 'main.html'}, {title: 'Контакты', link: 'contacts.html'}])
+      .contacts__main
+        .contacts__main-grid
+          .contacts__main-col
+            +heading('Контакты')
+            p.contacts__main-subheading Центральный офис
+            +contact-card('350 000, Краснодар<br>ул. 40 лет Победы 9, офис 356<br>БЦ Аркаим Плаза', '+7 861 456−78−98', 'info@septikfr.ru')
+            p.contacts__main-workhours Без выходных с 9:00 до 18:00
+          .contacts__main-col
+            +heading('Реквизиты компании')
+            p.contacts__main-requisites ООО «Семейный Круг»<br><br>ОГРН 1167746483024 ИНН/КПП 7724365249/772401001<br><br>Юридический адрес: 115230, г. Москва, 1-й Нагатинский проезд, дом 10, стр.1<br><br>Расчетный счет: 40702810540000020220 «Сбербанк России» (ПАО) г. Москва<br><br>Корреспондентский счет: 30101810400000000225<br><br>БИК: 044525225
+        +feedback('Нужна помощь<br>в выборе септика?')
+      .contacts__departments
+        .contacts__departments-map#contacts-map
+        .contacts__departments-content
+          +heading('Представительства в&nbsp;моем регионе')
+          .contacts__departments-list.js-contacts-scroll
+            .contacts__departments-list-inner
+              +contact-card('contacts__departments-item', '350 000, Краснодар<br>ул. 40 лет Победы 9, офис 356<br>БЦ Аркаим Плаза', '+7 861 456−78−98', 'info@septikfr.ru')
+              +contact-card('contacts__departments-item', '350 738, поселок Веселое<br>ул. Индустриальная 2, офис 345<br>Сити Центр', '+7 861 456−78−98', 'info@septikfr.ru')
+              +contact-card('contacts__departments-item', '350 647, Сочи<br>ул. Ставропольская 55', '+7 861 456−78−98', 'info@septikfr.ru')
+              +contact-card('contacts__departments-item', '350 000, Краснодар<br>ул. 40 лет Победы 9, офис 356<br>БЦ Аркаим Плаза', '+7 861 456−78−98', 'info@septikfr.ru')
+              +contact-card('contacts__departments-item', '350 738, поселок Веселое<br>ул. Индустриальная 2, офис 345<br>Сити Центр', '+7 861 456−78−98', 'info@septikfr.ru')
+              +contact-card('contacts__departments-item', '350 647, Сочи<br>ул. Ставропольская 55', '+7 861 456−78−98', 'info@septikfr.ru')
+      .contacts__regions
+        +heading('Представительства в других регионах')
+        .contacts__regions-tabs
+          button.contacts__regions-tab.js-tab(data-tab="1", data-active) Краснодарский край
+          button.contacts__regions-tab.js-tab(data-tab="2") Ленинградская область
+          button.contacts__regions-tab.js-tab(data-tab="3") Республика крым
+          button.contacts__regions-tab.js-tab(data-tab="4") Ростовская область
+        .contacts__regions-items
+          .contacts__regions-content.js-tab-content(data-tab="1")
+            .contacts__regions-grid
+              - for(let i = 0; i < 3; i++)
+                +contact-card('contacts__regions-item', '350 000, Краснодар<br>ул. 40 лет Победы 9, офис 356<br>БЦ Аркаим Плаза', '+7 861 456−78−98', 'info@septikfr.ru')
+              - for(let i = 0; i < 3; i++)
+                +contact-card('contacts__regions-item', '350 738, поселок Веселое<br>ул. Индустриальная 2, офис 345<br>Сити Центр', '+7 861 456−78−98', 'info@septikfr.ru')
+          .contacts__regions-content.js-tab-content(data-tab="2")
+            .contacts__regions-grid
+              - for(let i = 0; i < 5; i++)
+                +contact-card('contacts__regions-item', '350 000, Санкт-Петербург<br>ул. 40 лет Победы 9, офис 356<br>БЦ Аркаим Плаза', '+7 861 456−78−98', 'info@septikfr.ru')
+          .contacts__regions-content.js-tab-content(data-tab="3")
+            .contacts__regions-grid
+              - for(let i = 0; i < 4; i++)
+                +contact-card('contacts__regions-item', '350 000, Севастополь<br>ул. 40 лет Победы 9, офис 356<br>БЦ Аркаим Плаза', '+7 861 456−78−98', 'info@septikfr.ru')
+          .contacts__regions-content.js-tab-content(data-tab="4")
+            .contacts__regions-grid
+              - for(let i = 0; i < 7; i++)
+                +contact-card('contacts__regions-item', '350 000, Ростов-на-Дону<br>ул. 40 лет Победы 9, офис 356<br>БЦ Аркаим Плаза', '+7 861 456−78−98', 'info@septikfr.ru')

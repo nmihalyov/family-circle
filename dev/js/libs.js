@@ -6,3 +6,6 @@
 
 // Decline words
 @@include('../../node_modules/decliner/dist/decliner.js')
+
+// Custom scrollbar
+@@include('../../node_modules/perfect-scrollbar/dist/perfect-scrollbar.js')

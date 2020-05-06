@@ -17,5 +17,6 @@ window.onload = () => {
   @@include('../components/hits/hits.js')
   @@include('../components/item/item.js')
   @@include('../components/cart/cart.js')
+  @@include('../components/contacts/contacts.js')
 
 }

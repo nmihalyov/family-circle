@@ -1,0 +1,5 @@
+mixin contact-card(className, address, phone, email)
+  .contact-card(class=`${className || ''}`)
+    p.contact-card__address!= address
+    p.contact-card__tel= phone
+    a.contact-card__mail(href=`mailto:${email}`)= email

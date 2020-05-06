@@ -1,0 +1,19 @@
+include ../components/header/header
+include ../components/calc/calc
+include ../components/contacts/contacts
+include ../components/footer/footer
+
+doctype
+html(lang="ru", prefix="og: http://ogp.me/ns#")
+  head
+    title Семейный круг | Контакты
+    include assets/_metas
+    include assets/_links
+    include assets/_scripts
+  body
+    .page-wrapper
+      +header
+      +calc
+      +contacts
+      +footer
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<вставить сюда API-ключ>", type="text/javascript")
